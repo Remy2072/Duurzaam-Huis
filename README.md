@@ -9,7 +9,7 @@
 
 ## Project: Duurzaam Huis
 
-Dit is ons project **[Duurzaam Huis](https://24114.hosts1.ma-cloud.nl/DuurzaamHuis/index.html)**.
+Dit is ons project **[Ecosy](https://24114.hosts1.ma-cloud.nl/DuurzaamHuis/index.html)**.
 
 ## Hoe clone je onze website?
 
