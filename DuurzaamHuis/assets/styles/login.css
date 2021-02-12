@@ -215,6 +215,7 @@ body {
 
 #login-style {
   -webkit-appearance: none;
-  border-radius: 0;
+  appearance: none;
   color: #7f7f87;
+  opacity: 1;
 }
