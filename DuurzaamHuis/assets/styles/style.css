@@ -50,3 +50,8 @@ body {
 .menu-btn.open .menu-btn_burger::after {
   transform: rotate(-45deg) translate(35px, 35px);
 }
+
+#login-style {
+  -webkit-appearance: none;
+  border-radius: 0;
+}

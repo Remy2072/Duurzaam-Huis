@@ -212,3 +212,9 @@ body {
     padding: 0 15px;
   }
 }
+
+#login-style {
+  -webkit-appearance: none;
+  border-radius: 0;
+  color: #7f7f87;
+}
