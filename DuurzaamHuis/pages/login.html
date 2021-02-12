@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Ecosy | Login</title>
-    <link rel="stylesheet" href="../assets/styles/login.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet">
-    <link rel="icon" href="../assets/images/EcosyIconWebsite.svg">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="../assets/styles/login.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link href="https://fonts.googleapis.com/css?family=Hind&display=swap" rel="stylesheet"> -->
+    <link rel="icon" href="../assets/images/EcosyIconWebsite.svg" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+      charset="utf-8"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <script>
-  </script>
+  <script></script>
   <body>
     <div class="login-form">
-      <div class="logo"><img src="../assets/images/Login_Logo.svg" alt=""></div>
+      <div style="margin-bottom: 25px" class="logo">
+        <img src="../assets/images/Login_Logo.svg" alt="" />
+      </div>
 
       <h6>Sign in</h6>
 
       <form action="">
-        <div class="textbox">
-          <input type="text" id="uname" placeholder="EmailAdress">
+        <div style="margin-bottom: 15px" class="textbox">
+          <input type="text" id="uname" placeholder="Email Address" />
           <span class="check-message hidden">Required</span>
         </div>
 
         <div class="textbox">
-          <input type="password" id="pname" placeholder="Password">
+          <input type="password" id="pname" placeholder="Password" />
           <span class="check-message hidden">Required</span>
         </div>
 
         <div class="options">
           <label class="remember-me">
             <span class="checkbox">
-              <input type="checkbox">
+              <input type="checkbox" />
               <span class="checked"></span>
             </span>
             Remember me
@@ -40,32 +49,31 @@
           <a href="#" target="_blank">Forgot Your Password</a>
         </div>
 
-        <input type="button" value="Log In Now" class="login-btn" disabled>
+        <input type="button" value="Log In Now" class="login-btn" disabled />
         <div class="privacy-link">
           <a href="#" target="_blank">Privacy Policy</a>
         </div>
       </form>
-
     </div>
 
     <script type="text/javascript">
-      $(".textbox input").focusout(function(){
-        if($(this).val() == ""){
+      $(".textbox input").focusout(function () {
+        if ($(this).val() == "") {
           $(this).siblings().removeClass("hidden");
-          $(this).css("background","#554343");
-        }else{
+          $(this).css("background", "#554343");
+        } else {
           $(this).siblings().addClass("hidden");
-          $(this).css("background","#484848");
+          $(this).css("background", "#484848");
         }
       });
 
-      $(".textbox input").keyup(function(){
+      $(".textbox input").keyup(function () {
         var inputs = $(".textbox input");
-        if(inputs[0].value != "" && inputs[1].value){
-          $(".login-btn").attr("disabled",false);
+        if (inputs[0].value != "" && inputs[1].value) {
+          $(".login-btn").attr("disabled", false);
           $(".login-btn").addClass("active");
-        }else{
-          $(".login-btn").attr("disabled",true);
+        } else {
+          $(".login-btn").attr("disabled", true);
           $(".login-btn").removeClass("active");
         }
       });

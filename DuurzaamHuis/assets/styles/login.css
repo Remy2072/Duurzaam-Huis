@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "hind", sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-decoration: none;
 }
 
@@ -18,7 +18,7 @@ body {
   width: 470px;
   background: #252529;
   border-radius: 5px;
-  padding: 30px 60px;
+  padding: 140px 40px;
 }
 
 .logo {
@@ -56,34 +56,13 @@ body {
   width: 20px;
 }
 
-.fb {
-  background: #4267b2;
-}
-
-.google {
-  background: #fff;
-}
-
-.ps {
-  background: #02b3e8;
-}
-
-.xbox {
-  background: #107c10;
-}
-
-.switch {
-  background: #e60012;
-}
-
 .social-media button:hover {
   opacity: 0.7;
 }
 
 .login-form h6 {
-  color: #f1f1f1;
+  color: #7f7f87;
   font-size: 15px;
-  text-transform: uppercase;
   font-weight: 500;
 }
 
@@ -91,14 +70,14 @@ body {
   width: 100%;
   height: 50px;
   position: relative;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .textbox input {
   width: 100%;
   height: 50px;
   border: none;
-  background: #3B3B40;
+  background: #3b3b40;
   padding: 0 15px;
   font-size: 16px;
   outline: none;
@@ -115,7 +94,6 @@ body {
   top: 50%;
   right: 10px;
   color: #fff;
-  text-transform: uppercase;
   transform: translateY(-50%);
 }
 
@@ -125,7 +103,7 @@ body {
 
 .options {
   margin-top: 15px;
-  color: #f4f4f480;
+  color: #7f7f87;
   overflow: hidden;
   font-size: 14px;
 }
@@ -141,7 +119,7 @@ body {
   display: inline-block;
   width: 20px;
   height: 20px;
-  background: #484848;
+  background: #3b3b40;
   margin-right: 15px;
   position: relative;
 }
@@ -170,7 +148,7 @@ body {
 }
 
 .options a {
-  color: #f4f4f480;
+  color: #7f7f87;
   font-size: 14px;
   float: right;
 }
@@ -179,8 +157,8 @@ body {
   width: 100%;
   height: 50px;
   margin-top: 30px;
-  background: #1C1C1F;
-  color: #7F7F87;
+  background: #1c1c1f;
+  color: #7f7f87;
   border: none;
   outline: none;
   cursor: pointer;
@@ -226,7 +204,7 @@ body {
 
 @media screen and (max-width: 470px) {
   body {
-    background: #202020;
+    background-color: #252529;
   }
 
   .login-form {
