@@ -98,7 +98,7 @@ body {
 .logo {
   height: 50px;
   margin-left: 140px;
-  transform:translateY(100px);
+  transform: translateY(100px);
 }
 
 svg.inst {
@@ -108,10 +108,13 @@ svg.inst {
   fill: #fff;
   margin-top: 1390px;
   margin-left: 30%;
-
 }
 svg.inst:hover {
   transform: rotate(120deg);
   fill: #17c9b7;
 }
 
+.copyright {
+  margin-left: 140px;
+  margin-top: -60px;
+}
