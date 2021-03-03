@@ -38,7 +38,7 @@ body {
   grid-row-end: 8;
   grid-column-start: 2;
   grid-column-end: 6;
-  border-radius: 8px;
+  border-radius: 0.4em;
 }
 
 .three {
@@ -46,7 +46,7 @@ body {
   grid-row-end: 8;
   grid-column-start: 6;
   grid-column-end: 10;
-  border-radius: 8px;
+  border-radius: 0.4em;
 }
 
 .four {
@@ -54,7 +54,7 @@ body {
   grid-row-end: 8;
   grid-column-start: 10;
   grid-column-end: 14;
-  border-radius: 8px;
+  border-radius: 0.4em;
 }
 
 .five {
@@ -62,7 +62,7 @@ body {
   grid-row-end: 13;
   grid-column-start: 2;
   grid-column-end: 8;
-  border-radius: 8px;
+  border-radius: 0.4em;
 }
 
 .six {
@@ -70,14 +70,14 @@ body {
   grid-row-end: 17;
   grid-column-start: 8;
   grid-column-end: 14;
-  border-radius: 8px;
+  border-radius: 0.4em;
 }
 .seven {
   grid-row-start: 13;
   grid-row-end: 17;
   grid-column-start: 2;
   grid-column-end: 5;
-  border-radius: 8px;
+  border-radius: 0.4em;
 }
 
 .eight {
@@ -85,7 +85,7 @@ body {
   grid-row-end: 17;
   grid-column-start: 5;
   grid-column-end: 8;
-  border-radius: 8px;
+  border-radius: 0.4em;
 }
 
 .nine {
@@ -93,8 +93,26 @@ body {
   grid-row-end: 29;
   grid-column-start: 2;
   grid-column-end: 14;
-  border-radius: 8px;
+  border-radius: 0.4em;
 }
+
+.ten {
+  grid-row-start: 29;
+  grid-row-end: 31;
+  grid-column-start: 2;
+  grid-column-end: 14;
+  border-radius: 0.4em;
+}
+
+.eleven{
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 14;
+  border-radius: 0.4em;
+}
+
+
 .logo {
   height: 50px;
   margin-left: 140px;
