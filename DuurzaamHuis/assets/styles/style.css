@@ -20,14 +20,19 @@ body {
 #dashboard {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-row-gap: 30px;
   grid-column-gap: 30px;
+  height: 140vh;
 }
 
-.one {
+
+
+/* START SIDEBAR */
+
+.sidebar {
   grid-row-start: 1;
-  grid-row-end: -1;
+  grid-row-end: 31;
   grid-column-start: 1;
   grid-column-end: 2;
   position: relative;
@@ -35,7 +40,32 @@ body {
   flex-direction: column;
 }
 
-.two {
+.profiel {
+  max-height: 4em;
+  flex: 1;
+}
+
+img.instellingen {
+  height: 2em;
+  transition: 0.65s transform, 0.25s fill;
+}
+
+img.instellingen:hover {
+  transform: rotate(120deg);
+}
+
+.logout {
+  height: 2.8em;
+}
+
+/* EIND SIDEBAR */
+
+
+
+/* START BUITEN TEMPERATUUR */
+
+
+.buitenTemp {
   grid-row-start: 4;
   grid-row-end: 8;
   grid-column-start: 2;
@@ -43,7 +73,13 @@ body {
   border-radius: 0.4em;
 }
 
-.three {
+/* EIND BUITEN TEMPERATUUR */
+
+
+
+/* START BINNEN TEMPERATUUR */
+
+.binnenTemp {
   grid-row-start: 4;
   grid-row-end: 8;
   grid-column-start: 6;
@@ -51,7 +87,13 @@ body {
   border-radius: 0.4em;
 }
 
-.four {
+/* EIND BINNEN TEMPERATUUR */
+
+
+
+/* START TIJD */
+
+.tijd {
   grid-row-start: 4;
   grid-row-end: 8;
   grid-column-start: 10;
@@ -59,13 +101,25 @@ body {
   border-radius: 0.4em;
 }
 
-.five {
+/* EIND TIJD */
+
+
+
+/* START PHILIPS HUE SLIDER */
+
+.slider {
   grid-row-start: 8;
   grid-row-end: 13;
   grid-column-start: 2;
   grid-column-end: 8;
   border-radius: 0.4em;
 }
+
+/* EIND PHILIPS HUE SLIDER */
+
+
+
+/* START VAK 6 */
 
 .six {
   grid-row-start: 8;
@@ -74,7 +128,14 @@ body {
   grid-column-end: 14;
   border-radius: 0.4em;
 }
-.seven {
+
+/* EIND VAK 6 */
+
+
+
+/* START LUCHTKWALITEIT */
+
+.kwaliteit {
   grid-row-start: 13;
   grid-row-end: 17;
   grid-column-start: 2;
@@ -82,7 +143,13 @@ body {
   border-radius: 0.4em;
 }
 
-.eight {
+/* EIND LUCHTKWALITEIT */
+
+
+
+/* START SPOTIFY */
+
+.spotify {
   grid-row-start: 13;
   grid-row-end: 17;
   grid-column-start: 5;
@@ -90,7 +157,14 @@ body {
   border-radius: 0.4em;
 }
 
-.nine {
+/* EIND SPOTIFY */
+
+
+
+/* START GRAFIEK */
+
+
+.grafiek {
   grid-row-start: 17;
   grid-row-end: 29;
   grid-column-start: 2;
@@ -98,45 +172,45 @@ body {
   border-radius: 0.4em;
 }
 
-.ten {
+/* EIND GRAFIEK */
+
+
+
+/* START COPYRIGHT */
+
+.copyright {
   grid-row-start: 29;
   grid-row-end: 31;
   grid-column-start: 2;
   grid-column-end: 14;
   border-radius: 0.4em;
-  margin-bottom: 30px;
 }
 
-.eleven{
+.copyrightText{
+  margin: 0px;
+}
+
+/* EIND COPYRIGHT */
+
+
+
+
+.header{
   grid-row-start: 1;
   grid-row-end: 4;
   grid-column-start: 2;
   grid-column-end: 14;
   border-radius: 0.4em;
-  margin-top: 30px;
 }
 
 
 .logo {
   height: 2.5em;
 }
-.pf {
-  max-height: 4em;
-  flex: 1;
-  
-}
 
-img.inst {
-  height: 2em;
-  transition: 0.65s transform, 0.25s fill;
-}
-img.inst:hover {
-  transform: rotate(120deg);
-}
 
-.logout {
-  height: 2.8em;
-}
+
+
 .toggle-btn
 {
   position: relative;
