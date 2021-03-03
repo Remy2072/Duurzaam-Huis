@@ -31,6 +31,8 @@ body {
   grid-column-start: 1;
   grid-column-end: 2;
   position: relative;
+  display:flex;
+  flex-direction: column;
 }
 
 .two {
@@ -118,23 +120,23 @@ body {
 .logo {
   height: 2.5em;
 }
+.pf {
+  max-height: 4em;
+  flex: 1;
+  
+}
 
-svg.inst {
-  height: 30px;
+img.inst {
+  height: 2em;
   transition: 0.65s transform, 0.25s fill;
-  fill: #fff;
-  position: absolute;
-  bottom: 0;
 }
-svg.inst:hover {
+img.inst:hover {
   transform: rotate(120deg);
-  fill: #17c9b7;
 }
 
-.copyright {
+.logout {
+  height: 2.8em;
 }
-
-
 .toggle-btn
 {
   position: relative;
@@ -171,7 +173,6 @@ input[type="checkbox"]
   overflow: hidden;
   opacity: 1;
   background-color: #17c9b7;
-  box-shadow: 0px 2px 25px #d9d9d9;
   border-radius: 40px;
   transition: 0.2s ease background-color, 0.2s ease opacity;
 }
