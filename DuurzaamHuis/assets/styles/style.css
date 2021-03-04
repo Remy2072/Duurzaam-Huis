@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap%22");
 
 body {
-  background: #1c1c1f;
+  background: #faf5d8;
   font-family: "Montserrat", sans-serif;
-  color: #ffffff;
+  /* color: #ffffff; */
   font-size: 18px;
+  transition: 250ms background;
   margin: 0;
   margin-right: 30px;
 }
@@ -30,7 +31,7 @@ body {
 /* START SIDEBAR */
 
 .sidebar {
-  background-color: #252529;
+  background-color: #d8d1b0;
   grid-row-start: 1;
   grid-row-end: 31;
   grid-column-start: 1;
@@ -39,6 +40,7 @@ body {
   display:flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: 250ms background;
 }
 
 .upperIcon{
@@ -54,18 +56,22 @@ body {
   flex: 1;
 }
 
-img.instellingen {
+div.instellingen {
   height: 2em;
   transition: 0.65s transform, 0.25s fill;
   margin-bottom: 1em;
+  background-color:#2d2d2d;
+  -webkit-mask: url(../images/settings.svg) no-repeat center / contain;
 }
 
-img.instellingen:hover {
+div.instellingen:hover {
   transform: rotate(120deg);
 }
 
 .logout {
   height: 2.8em;
+  background-color:#2d2d2d;
+  -webkit-mask: url(../images/logout.svg) no-repeat center / contain;
 }
 
 /* EIND SIDEBAR */
@@ -76,12 +82,13 @@ img.instellingen:hover {
 
 
 .buitenTemp {
-  background-color: #252529;
+  background-color: #d8d1b0;
   grid-row-start: 4;
   grid-row-end: 8;
   grid-column-start: 2;
   grid-column-end: 6;
   border-radius: 0.4em;
+  transition: 250ms background;
 }
 
 /* EIND BUITEN TEMPERATUUR */
@@ -91,12 +98,13 @@ img.instellingen:hover {
 /* START BINNEN TEMPERATUUR */
 
 .binnenTemp {
-  background-color: #252529;
+  background-color: #d8d1b0;
   grid-row-start: 4;
   grid-row-end: 8;
   grid-column-start: 6;
   grid-column-end: 10;
   border-radius: 0.4em;
+  transition: 250ms background;
 }
 
 /* EIND BINNEN TEMPERATUUR */
@@ -106,12 +114,13 @@ img.instellingen:hover {
 /* START TIJD */
 
 .tijd {
-  background-color: #252529;
+  background-color: #d8d1b0;
   grid-row-start: 4;
   grid-row-end: 8;
   grid-column-start: 10;
   grid-column-end: 14;
   border-radius: 0.4em;
+  transition: 250ms background;
 }
 
 /* EIND TIJD */
@@ -121,12 +130,13 @@ img.instellingen:hover {
 /* START PHILIPS HUE SLIDER */
 
 .slider {
-  background-color: #252529;
+  background-color: #d8d1b0;
   grid-row-start: 8;
   grid-row-end: 13;
   grid-column-start: 2;
   grid-column-end: 8;
   border-radius: 0.4em;
+  transition: 250ms background;
 }
 
 /* EIND PHILIPS HUE SLIDER */
@@ -136,12 +146,13 @@ img.instellingen:hover {
 /* START VAK 6 */
 
 .six {
-  background-color: #252529;
+  background-color: #d8d1b0;
   grid-row-start: 8;
   grid-row-end: 17;
   grid-column-start: 8;
   grid-column-end: 14;
   border-radius: 0.4em;
+  transition: 250ms background;
 }
 
 /* EIND VAK 6 */
@@ -151,12 +162,13 @@ img.instellingen:hover {
 /* START LUCHTKWALITEIT */
 
 .kwaliteit {
-  background-color: #252529;
+  background-color: #d8d1b0;
   grid-row-start: 13;
   grid-row-end: 17;
   grid-column-start: 2;
   grid-column-end: 5;
   border-radius: 0.4em;
+  transition: 250ms background;
 }
 
 /* EIND LUCHTKWALITEIT */
@@ -166,12 +178,13 @@ img.instellingen:hover {
 /* START SPOTIFY */
 
 .spotify {
-  background-color: #252529;
+  background-color: #d8d1b0;
   grid-row-start: 13;
   grid-row-end: 17;
   grid-column-start: 5;
   grid-column-end: 8;
   border-radius: 0.4em;
+  transition: 250ms background;
 }
 
 /* EIND SPOTIFY */
@@ -182,12 +195,13 @@ img.instellingen:hover {
 
 
 .grafiek {
-  background-color: #252529;
+  background-color: #d8d1b0;
   grid-row-start: 17;
   grid-row-end: 29;
   grid-column-start: 2;
   grid-column-end: 14;
   border-radius: 0.4em;
+  transition: 250ms background;
 }
 
 /* EIND GRAFIEK */
@@ -203,17 +217,23 @@ img.instellingen:hover {
   grid-column-start: 2;
   grid-column-end: 14;
   border-radius: 0.4em;
-  margin-top: 1.2em;
+  /* margin-top: 1.5em; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .copyrightText{
-  margin: 0px;
+  /* margin: 0px; */
   font-size: 0.8em;
+  color: #2d2d2d;
+  transition: 250ms color;
 }
 
+.copyrightText span {
+  color: #17c9b7;
+}
 /* EIND COPYRIGHT */
-
-
 
 
 .header{
@@ -228,17 +248,17 @@ img.instellingen:hover {
 	justify-content: space-between;
 	align-items: baseline;
 	align-content: center;
-  background-color: #1c1c1f;
+  /* background-color: #1c1c1f; */
 }
 
 
 .logo {
   display: inline-flex;
   height: 2.5em;
+  background-color:#2d2d2d;
+  -webkit-mask: url(../images/EcosyLogo.svg) no-repeat left / contain;
+  width: 20em;
 }
-
-
-
 
 .toggle-btn
 {
@@ -275,7 +295,7 @@ input[type="checkbox"]
   left: 0px;
   overflow: hidden;
   opacity: 1;
-  background-color: #17c9b7;
+  background-color: #2d2d2d;
   border-radius: 20px;
   transition: 0.2s ease background-color, 0.2s ease opacity;
 }
@@ -293,14 +313,14 @@ input[type="checkbox"]
 
 #_1st-toggle-btn span:before
 {
-  background-color: #17c9b7;
+  background-color: #2d2d2d;
   transform: translate(-29px,0px);
   z-index: 1;
 }
 
 #_1st-toggle-btn span:after
 {
-  background-color:#fff;
+  background-color:#faf5d8;
   transform: translate(4px,0px);
   z-index: 0;
 }
@@ -328,3 +348,39 @@ input[type="checkbox"]
 }
 
 /* First toggle btn completed */
+
+/* DARKMODE STYLE ------------------------------------------------ */
+body.darkmode {
+  background: #1c1c1f;
+  color: white;
+}
+
+body.darkmode .item:not(.copyright, .header){
+  background: #252529;
+}
+
+body.darkmode .copyrightText {
+  color: #646278;
+  font-weight: 700;
+}
+
+body.darkmode .instellingen {
+  background-color:#fff;
+  -webkit-mask: url(../images/settings.svg) no-repeat center / contain;
+}
+
+body.darkmode .logout {
+  background-color:#fff;
+  -webkit-mask: url(../images/logout.svg) no-repeat center / contain;
+}
+
+body.darkmode .logo {
+  background-color:#17c9b7;
+  -webkit-mask: url(../images/EcosyLogo.svg) no-repeat left / contain;
+}
+
+
+/* ?profile picture op de zelfde hoogte als het ecosy logo 
+   ?het ecosy logo iets meer omlaag dat het in het midden zit 
+   ?loguit en settings knop op de zelfde hoogte als de copyright text
+   ?zorgen dat wanneer je inlogt dat je direct naar de darkmode version gaat */
