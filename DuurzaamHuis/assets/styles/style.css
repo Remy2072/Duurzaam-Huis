@@ -49,11 +49,13 @@ body {
 
 .lowerIcons{
   width: 100%;
+  margin-bottom: 0.5em;
 }
 
 .profiel {
   max-height: 4em;
   flex: 1;
+  margin-top: 0.5em;
 }
 
 div.instellingen {
@@ -248,7 +250,8 @@ div.instellingen:hover {
 	justify-content: space-between;
 	align-items: baseline;
 	align-content: center;
-  /* background-color: #1c1c1f; */
+  /* background-color: red; */
+  margin-top: 1.5em;
 }
 
 
@@ -380,7 +383,6 @@ body.darkmode .logo {
 }
 
 
-/* ?profile picture op de zelfde hoogte als het ecosy logo 
-   ?het ecosy logo iets meer omlaag dat het in het midden zit 
-   ?loguit en settings knop op de zelfde hoogte als de copyright text
-   ?zorgen dat wanneer je inlogt dat je direct naar de darkmode version gaat */
+/*
+   ?zorgen dat wanneer je inlogt dat je direct naar de darkmode version gaat
+   ?Darkmode knop moet gefixt zijn */
