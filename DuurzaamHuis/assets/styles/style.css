@@ -19,11 +19,11 @@ body {
 
 #dashboard {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-row-gap: 30px;
-  grid-column-gap: 30px;
-  height: 140vh;
+  height: 100vh;
+  grid-template-columns: repeat(26, 1fr);
+  grid-template-rows: repeat(27, 1fr);
+  grid-row-gap: 25px;
+  grid-column-gap: 25px;
 }
 
 
@@ -33,9 +33,9 @@ body {
 .sidebar {
   background-color: #d8d1b0;
   grid-row-start: 1;
-  grid-row-end: 31;
+  grid-row-end: -1;
   grid-column-start: 1;
-  grid-column-end: 2;
+  grid-column-end: 3;
   position: relative;
   display:flex;
   flex-direction: column;
@@ -87,8 +87,8 @@ div.instellingen:hover {
   background-color: #d8d1b0;
   grid-row-start: 4;
   grid-row-end: 8;
-  grid-column-start: 2;
-  grid-column-end: 6;
+  grid-column-start: 3;
+  grid-column-end: 11;
   border-radius: 0.4em;
   transition: 250ms background;
 }
@@ -103,8 +103,8 @@ div.instellingen:hover {
   background-color: #d8d1b0;
   grid-row-start: 4;
   grid-row-end: 8;
-  grid-column-start: 6;
-  grid-column-end: 10;
+  grid-column-start: 11;
+  grid-column-end: 19;
   border-radius: 0.4em;
   transition: 250ms background;
 }
@@ -119,8 +119,8 @@ div.instellingen:hover {
   background-color: #d8d1b0;
   grid-row-start: 4;
   grid-row-end: 8;
-  grid-column-start: 10;
-  grid-column-end: 14;
+  grid-column-start: 19;
+  grid-column-end: 27;
   border-radius: 0.4em;
   transition: 250ms background;
 }
@@ -135,8 +135,8 @@ div.instellingen:hover {
   background-color: #d8d1b0;
   grid-row-start: 8;
   grid-row-end: 13;
-  grid-column-start: 2;
-  grid-column-end: 8;
+  grid-column-start: 3;
+  grid-column-end: 15;
   border-radius: 0.4em;
   transition: 250ms background;
 }
@@ -151,8 +151,8 @@ div.instellingen:hover {
   background-color: #d8d1b0;
   grid-row-start: 8;
   grid-row-end: 17;
-  grid-column-start: 8;
-  grid-column-end: 14;
+  grid-column-start: 15;
+  grid-column-end: 27;
   border-radius: 0.4em;
   transition: 250ms background;
 }
@@ -167,8 +167,8 @@ div.instellingen:hover {
   background-color: #d8d1b0;
   grid-row-start: 13;
   grid-row-end: 17;
-  grid-column-start: 2;
-  grid-column-end: 5;
+  grid-column-start: 3;
+  grid-column-end: 9;
   border-radius: 0.4em;
   transition: 250ms background;
 }
@@ -183,8 +183,8 @@ div.instellingen:hover {
   background-color: #d8d1b0;
   grid-row-start: 13;
   grid-row-end: 17;
-  grid-column-start: 5;
-  grid-column-end: 8;
+  grid-column-start: 9;
+  grid-column-end: 15;
   border-radius: 0.4em;
   transition: 250ms background;
 }
@@ -199,9 +199,9 @@ div.instellingen:hover {
 .grafiek {
   background-color: #d8d1b0;
   grid-row-start: 17;
-  grid-row-end: 29;
-  grid-column-start: 2;
-  grid-column-end: 14;
+  grid-row-end: 26;
+  grid-column-start: 3;
+  grid-column-end: 27;
   border-radius: 0.4em;
   transition: 250ms background;
 }
@@ -214,10 +214,10 @@ div.instellingen:hover {
 
 .copyright {
   /* background-color: yellow; */
-  grid-row-start: 28;
-  grid-row-end: 31;
-  grid-column-start: 2;
-  grid-column-end: 14;
+  grid-row-start: 25;
+  grid-row-end: 28;
+  grid-column-start: 3;
+  grid-column-end: 27;
   border-radius: 0.4em;
   /* margin-top: 1.5em; */
   display: flex;
@@ -240,9 +240,9 @@ div.instellingen:hover {
 
 .header{
   grid-row-start: 1;
-  grid-row-end: 4;
-  grid-column-start: 2;
-  grid-column-end: 14;
+  grid-row-end: 5;
+  grid-column-start: 3;
+  grid-column-end: -1;
   border-radius: 0.4em;
   display: flex;
 	flex-direction: row;
@@ -386,3 +386,23 @@ body.darkmode .logo {
 /*
    ?zorgen dat wanneer je inlogt dat je direct naar de darkmode version gaat
    ?Darkmode knop moet gefixt zijn */
+
+   @media only screen 
+   and (min-device-width: 375px) 
+   and (max-device-width: 812px) 
+   and (-webkit-min-device-pixel-ratio: 3) { 
+     #dashboard {
+       grid-template-columns: 1fr;
+       
+     }
+ }
+ 
+ /* Portrait and Landscape */
+ @media only screen 
+   and (min-device-width: 768px) 
+   and (max-device-width: 1024px) 
+   and (-webkit-min-device-pixel-ratio: 2) {
+     #dashboard {
+       grid-template-columns: 1fr;
+     }
+ }
