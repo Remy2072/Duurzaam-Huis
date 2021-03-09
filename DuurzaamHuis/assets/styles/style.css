@@ -7,7 +7,8 @@ body {
   font-size: 18px;
   transition: 250ms background;
   margin: 0;
-  margin-right: 30px;
+  margin-right: 1.5em;
+  margin-left: 1.5em;
 }
 
 #dashboard > div {
@@ -20,7 +21,7 @@ body {
 #dashboard {
   display: grid;
   height: 100vh;
-  grid-template-columns: repeat(26, 1fr);
+  grid-template-columns: repeat(24, 1fr);
   grid-template-rows: repeat(27, 1fr);
   grid-row-gap: 25px;
   grid-column-gap: 25px;
@@ -87,8 +88,8 @@ div.instellingen:hover {
   background-color: #d8d1b0;
   grid-row-start: 4;
   grid-row-end: 8;
-  grid-column-start: 3;
-  grid-column-end: 11;
+  grid-column-start: 1;
+  grid-column-end: 9;
   border-radius: 0.4em;
   transition: 250ms background;
 }
@@ -103,8 +104,8 @@ div.instellingen:hover {
   background-color: #d8d1b0;
   grid-row-start: 4;
   grid-row-end: 8;
-  grid-column-start: 11;
-  grid-column-end: 19;
+  grid-column-start: 9;
+  grid-column-end: 17;
   border-radius: 0.4em;
   transition: 250ms background;
 }
@@ -119,8 +120,8 @@ div.instellingen:hover {
   background-color: #d8d1b0;
   grid-row-start: 4;
   grid-row-end: 8;
-  grid-column-start: 19;
-  grid-column-end: 27;
+  grid-column-start: 17;
+  grid-column-end: 25;
   border-radius: 0.4em;
   transition: 250ms background;
 }
@@ -135,8 +136,8 @@ div.instellingen:hover {
   background-color: #d8d1b0;
   grid-row-start: 8;
   grid-row-end: 13;
-  grid-column-start: 3;
-  grid-column-end: 15;
+  grid-column-start: 1;
+  grid-column-end: 13;
   border-radius: 0.4em;
   transition: 250ms background;
 }
@@ -151,8 +152,8 @@ div.instellingen:hover {
   background-color: #d8d1b0;
   grid-row-start: 8;
   grid-row-end: 17;
-  grid-column-start: 15;
-  grid-column-end: 27;
+  grid-column-start: 13;
+  grid-column-end: 25;
   border-radius: 0.4em;
   transition: 250ms background;
 }
@@ -167,8 +168,8 @@ div.instellingen:hover {
   background-color: #d8d1b0;
   grid-row-start: 13;
   grid-row-end: 17;
-  grid-column-start: 3;
-  grid-column-end: 9;
+  grid-column-start: 1;
+  grid-column-end: 7;
   border-radius: 0.4em;
   transition: 250ms background;
 }
@@ -183,8 +184,8 @@ div.instellingen:hover {
   background-color: #d8d1b0;
   grid-row-start: 13;
   grid-row-end: 17;
-  grid-column-start: 9;
-  grid-column-end: 15;
+  grid-column-start: 7;
+  grid-column-end: 13;
   border-radius: 0.4em;
   transition: 250ms background;
 }
@@ -200,8 +201,8 @@ div.instellingen:hover {
   background-color: #d8d1b0;
   grid-row-start: 17;
   grid-row-end: 26;
-  grid-column-start: 3;
-  grid-column-end: 27;
+  grid-column-start: 1;
+  grid-column-end: 25;
   border-radius: 0.4em;
   transition: 250ms background;
 }
@@ -216,8 +217,8 @@ div.instellingen:hover {
   /* background-color: yellow; */
   grid-row-start: 25;
   grid-row-end: 28;
-  grid-column-start: 3;
-  grid-column-end: 27;
+  grid-column-start: 1;
+  grid-column-end: 25;
   border-radius: 0.4em;
   /* margin-top: 1.5em; */
   display: flex;
@@ -241,17 +242,17 @@ div.instellingen:hover {
 .header{
   grid-row-start: 1;
   grid-row-end: 5;
-  grid-column-start: 3;
+  grid-column-start: 1;
   grid-column-end: -1;
   border-radius: 0.4em;
   display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: baseline;
-	align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  align-content: stretch;
   /* background-color: red; */
-  margin-top: 1.5em;
+  margin-top: 0.8em;
 }
 
 
@@ -260,7 +261,7 @@ div.instellingen:hover {
   height: 2.5em;
   background-color:#2d2d2d;
   -webkit-mask: url(../images/EcosyLogo.svg) no-repeat left / contain;
-  width: 20em;
+  width: 8em;
 }
 
 .toggle-btn
