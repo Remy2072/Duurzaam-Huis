@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ecosy</title>
     <!--?  Dit is de embed meta data-->
     <meta content="Ecosy" property="og:title" />
@@ -21,87 +21,109 @@
     <meta content="https://i.imgur.com/TJVBH4d.jpg" property="og:image" />
     <meta content="#17c9b7" data-react-helmet="true" name="theme-color" />
     <link rel="icon" href="assets/images/EcosyIconWebsite.svg" />
-    <link rel="stylesheet" href="assets/styles/style.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-</head>
-<body class="darkmode">
-  <div class="grid-container">
-    <div class="menu-icon">
-     <i class="fas fa-bars header__menu"></i>
-   </div>
-    
-   <header class="header">
-     <div class="header__search">
-       <input class="header__input" placeholder="Search...">
-       <a class="buscar-btn">
-        <i class="far fa-search"></i>       
-       </a>
-     </div>
-     <div class="toggle-btn" id="_1st-toggle-btn">
-      <input type="checkbox" checked />
-      <span></span>
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="darkmode">
+    <div class="grid-container">
+      <div class="menu-icon">
+        <i class="fas fa-bars header__menu"></i>
+      </div>
+
+      <header class="header">
+        <div class="header__search">
+          <input class="header__input" placeholder="Search..." />
+          <a class="buscar-btn">
+            <i class="far fa-search"></i>
+          </a>
+        </div>
+        <div class="toggle-btn" id="_1st-toggle-btn">
+          <input type="checkbox" checked />
+          <span></span>
+        </div>
+      </header>
+
+      <aside class="sidenav">
+        <div class="sidenav__close-icon">
+          <i class="fas fa-times sidenav__brand-close"></i>
+        </div>
+        <div class="title">
+          <img
+            class="logo"
+            src="assets/images/EcosyLogo.svg"
+            alt="logo van de site"
+          />
+        </div>
+        <ul class="sidenav__list">
+          <li class="sidenav__list-item">
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li class="sidenav__list-item">
+            <a href="#"><i class="fas fa-user"></i> Profiel</a>
+          </li>
+          <li class="sidenav__list-item">
+            <a href="#"><i class="fas fa-cog"></i> Instellingen </a>
+          </li>
+          <li class="sidenav__list-item">
+            <a href="#"><i class="fas fa-puzzle-piece"></i> Extensie </a>
+          </li>
+          <li class="sidenav__list-item">
+            <a href="#"
+              ><i class="fas fa-sign-out-alt fa-rotate-180"></i> Log out
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <main class="main">
+        <div class="main-header">
+          <div class="main-header__heading">Hallo, Remy</div>
+          <div class="main-header__updates">Recent Items</div>
+        </div>
+
+        <div class="main-overview">
+          <div class="overviewcard">
+            <div class="overviewcard__icon">Weer</div>
+          </div>
+          <div class="overviewcard">
+            <div class="overviewcard__icon">Temp thuis</div>
+          </div>
+          <div class="overviewcard">
+            <div class="overviewcard__icon">Spotify</div>
+          </div>
+          <div class="overviewcard">
+            <div class="overviewcard__icon">
+              <div class="tijd">
+                <div id="dagmaandjaar">DGJ</div>
+                <div class="clock">
+                  <div id="display"></div>
+                </div>
+                <div id="places">L</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main-cards">
+          <div class="card">To do list</div>
+          <div class="card">Slider</div>
+          <div class="card">Staaf grafiek</div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__copyright">
+          Copyright © <span style="color: #17c9b7">2021</span> All rights
+          reserved.
+        </div>
+      </footer>
     </div>
-   </header>
- 
-   <aside class="sidenav">
-     <div class="sidenav__close-icon">
-       <i class="fas fa-times sidenav__brand-close"></i>
-     </div>
-     <div class="title">
-        <img class="logo" src="assets/images/EcosyLogo.svg" alt="logo van de site" >
-     </div>
-     <ul class="sidenav__list">
-       <li class="sidenav__list-item">
-        <a href="index.html"><i  class="fas fa-home"></i> Home</a>
-      </li>
-       <li class="sidenav__list-item">
-        <a href="#"><i  class="fas fa-user"></i> Profiel</a>
-      </li>
-       <li class="sidenav__list-item">
-        <a href="#"><i  class="fas fa-cog"></i> Instellingen </a>
-      </li>
-       <li class="sidenav__list-item">
-        <a href="#"><i class="fas fa-puzzle-piece"></i> Extensie </a>
-      </li>
-      <li class="sidenav__list-item">
-        <a href="#"><i  class="fas fa-sign-out-alt fa-rotate-180"></i> Log out </a>
-      </li>
-     </ul>
-   </aside>
- 
-   <main class="main">
-     <div class="main-header">
-       <div class="main-header__heading">Hallo, Remy</div>
-       <div class="main-header__updates">Recent Items</div>
-     </div>
- 
-     <div class="main-overview">
-       <div class="overviewcard">
-         <div class="overviewcard__icon">Weer</div>
-       </div>
-       <div class="overviewcard">
-         <div class="overviewcard__icon">Temp thuis</div>        
-       </div>
-       <div class="overviewcard">
-         <div class="overviewcard__icon">Spotify</div>        
-       </div>
-       <div class="overviewcard">
-         <div class="overviewcard__icon">Tijd</div>
-       </div>
-     </div>
- 
-     <div class="main-cards">
-       <div class="card">To do list</div>
-       <div class="card">Slider</div>
-       <div class="card">Staaf grafiek</div>
-     </div>
-   </main>
- 
-   <footer class="footer">
-     <div class="footer__copyright">Copyright  © <span style="color: #17c9b7;">2021</span> All rights reserved.</div>
-   </footer>
- </div>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-     <script src="assets/scripts/js/main.js"></script>
-</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/scripts/js/main.js"></script>
+  </body>
 </html>

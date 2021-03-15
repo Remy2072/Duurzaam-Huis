@@ -433,6 +433,9 @@ body.lightmode .buscar-btn {
   }
 }
 
+.tijd {
+  text-align: center;
+}
 /* Medium screens breakpoint (1050px) */
 @media only screen and (min-width: 65.625em) {
   /* Break out main cards into two columns */
