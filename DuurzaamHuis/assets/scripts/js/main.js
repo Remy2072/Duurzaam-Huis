@@ -36,7 +36,7 @@ function toggleDarkmodeAppearance() {
 }
 
 // *TIJD WIDGET --------------------------------------------------------
-function start() {
+function TijdDatumLocatie() {
   setInterval(function () {
     let time = new Date();
     let sec = time.getSeconds();
@@ -113,4 +113,4 @@ function start() {
   plek.innerHTML = place;
 }
 
-window.addEventListener("DOMContentLoaded", start);
+window.addEventListener("DOMContentLoaded", TijdDatumLocatie);

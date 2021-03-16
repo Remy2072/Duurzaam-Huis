@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ecosy | Sign up</title>
+    <link rel="stylesheet" href="../assets/styles/login.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../assets/images/EcosyIconWebsite.svg" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    
+     <!-- *VORMGEVING VAN DE LOGIN PAGINA -->
+    <div class="login-form">
+      <div style="margin-bottom: 25px" class="logo">
+        <img src="../assets/images/Login_Logo.svg" alt="" />
+      </div>
+      
+      <!-- *ALLE TEXT IN DE LOGIN PAGINA -->
+      <h6>Sign up</h6>
+
+      <form action="logincheck.php" method="POST">
+
+        <div style="margin-bottom: 15px" class="textbox">
+          <input
+            type="text"
+            id="name"
+            placeholder="Name"
+            name="name"
+          />
+          <span class="check-message hidden">Required</span>
+        </div>
+
+        <div style="margin-bottom: 15px" class="textbox">
+          <input
+            type="text"
+            id="uname"
+            placeholder="Email Address"
+            name="uname"
+          />
+          <span class="check-message hidden">Required</span>
+        </div>
+
+        <div class="textbox">
+          <input
+            type="password"
+            id="pname"
+            placeholder="Password"
+            name="pname"
+          />
+          <span class="check-message hidden">Required</span>
+        </div>
+
+        <div class="options">
+          <label class="remember-me">
+            <span class="checkbox">
+              <input type="checkbox" />
+              <span class="checked"></span>
+            </span>
+            Remember me
+          </label>
+
+          <a href="login.html" target="_blank">Already Have an Account?</a>
+        </div>
+
+        <input
+          style="color: #e6e6e6"
+          type="submit"
+          value="Create account"
+          class="login-btn"
+          id="login-style"
+          disabled
+        />
+        <div class="privacy-link">
+          <a href="#" target="_blank">Privacy Policy</a>
+        </div>
+      </form>
+    </div>
+
+    <!-- *LOGIN BUTTON KLEUR VERRANDERING -->
+    <script type="text/javascript">
+      $(".textbox input").focusout(function () {
+        if ($(this).val() == "") {
+          $(this).siblings().removeClass("hidden");
+          $(this).css("background", "#554343");
+        } else {
+          $(this).siblings().addClass("hidden");
+          $(this).css("background", "#484848");
+        }
+      });
+
+      $(".textbox input").keyup(function () {
+        var inputs = $(".textbox input");
+        if (inputs[0].value != "" && inputs[1].value) {
+          $(".login-btn").attr("disabled", false);
+          $(".login-btn").addClass("active");
+        } else {
+          $(".login-btn").attr("disabled", true);
+          $(".login-btn").removeClass("active");
+        }
+      });
+    </script>
+  </body>
+</html>
