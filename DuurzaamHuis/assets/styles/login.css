@@ -1,3 +1,4 @@
+/* *BODY * -----------------------------------------------------------*/
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +15,7 @@ body {
   justify-content: center;
 }
 
+/* *LOGIN VORMEVING * ------------------------------------------------*/
 .login-form {
   width: 470px;
   background: #252529;
@@ -21,6 +23,14 @@ body {
   padding: 140px 40px;
 }
 
+#login-style {
+  -webkit-appearance: none;
+  appearance: none;
+  color: #7f7f87;
+  opacity: 1;
+}
+
+/* *LOGO * -----------------------------------------------------------*/
 .logo {
   height: 50px;
   text-align: center;
@@ -31,35 +41,7 @@ body {
   height: 50px;
 }
 
-.social-media {
-  display: flex;
-  margin: 30px 0;
-}
-
-.social-media button {
-  height: 50px;
-  width: 100px;
-  margin-right: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border: none;
-  transition: 0.3s linear;
-}
-
-.social-media button:last-child {
-  margin: 0;
-}
-
-.social-media button img {
-  width: 20px;
-}
-
-.social-media button:hover {
-  opacity: 0.7;
-}
-
+/* *TEXT  * -----------------------------------------------------------*/
 .login-form h6 {
   color: #7f7f87;
   font-size: 15px;
@@ -115,6 +97,7 @@ body {
   cursor: pointer;
 }
 
+/* *CHECKBOX * --------------------------------------------------------*/
 .checkbox {
   display: inline-block;
   width: 20px;
@@ -147,12 +130,14 @@ body {
   display: block;
 }
 
+/* *FORGOT YOUR PASSWORD * ------------------------------------------------*/
 .options a {
   color: #7f7f87;
   font-size: 14px;
   float: right;
 }
 
+/* *LOGIN BUTTON * --------------------------------------------------------*/
 .login-btn {
   width: 100%;
   height: 50px;
@@ -181,6 +166,7 @@ body {
   display: none;
 }
 
+/* *PRIVACY POLICY * ---------------------------------------------------------*/
 .privacy-link {
   text-align: center;
   margin-top: 35px;
@@ -191,17 +177,7 @@ body {
   font-size: 14px;
 }
 
-.dont-have-account {
-  font-size: 14px;
-  text-align: center;
-  color: #f4f4f480;
-  margin: 20px 0;
-}
-
-.dont-have-account a {
-  color: #f1f1f1;
-}
-
+/* *MEDIA QUERY VOOR TELEFOON * ----------------------------------------------*/
 @media screen and (max-width: 470px) {
   body {
     background-color: #252529;
@@ -211,11 +187,4 @@ body {
     width: 100%;
     padding: 0 15px;
   }
-}
-
-#login-style {
-  -webkit-appearance: none;
-  appearance: none;
-  color: #7f7f87;
-  opacity: 1;
 }

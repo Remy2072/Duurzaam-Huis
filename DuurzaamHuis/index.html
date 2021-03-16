@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ecosy</title>
-    <!--?  Dit is de embed meta data-->
     <meta content="Ecosy" property="og:title" />
     <meta
       content="Bespaar nu energie met Ecosy, Snel en simple.<br>
@@ -29,25 +28,27 @@
       crossorigin="anonymous"
     />
   </head>
+
+  <!-- *DARKMODE KNOP & HET GRID-->
   <body class="darkmode">
     <div class="grid-container">
       <div class="menu-icon">
         <i class="fas fa-bars header__menu"></i>
       </div>
 
+      <!-- *HEADER & SEARCH BAR -->
       <header class="header">
-        <div class="header__search">
-          <input class="header__input" placeholder="Search..." />
-          <a class="buscar-btn">
-            <i class="far fa-search"></i>
-          </a>
-        </div>
+        <form action="#">
+          <input type="search" placeholder="Search.." />
+          <button><i class="fas fa-search"></i></button>
+        </form>
         <div class="toggle-btn" id="_1st-toggle-btn">
           <input type="checkbox" checked />
           <span></span>
         </div>
       </header>
 
+      <!-- *SIDENAV -->
       <aside class="sidenav">
         <div class="sidenav__close-icon">
           <i class="fas fa-times sidenav__brand-close"></i>
@@ -80,6 +81,7 @@
         </ul>
       </aside>
 
+      <!-- *ITEMS IN HET GRID-->
       <main class="main">
         <div class="main-header">
           <div class="main-header__heading">Hallo, Remy</div>

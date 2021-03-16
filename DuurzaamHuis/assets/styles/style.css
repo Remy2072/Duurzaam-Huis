@@ -1,5 +1,7 @@
+/* *FONT * ----------------------------------------------------------------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap%22");
 
+/* *BODY * ----------------------------------------------------------------------*/
 body {
   margin: 0;
   padding: 0;
@@ -10,20 +12,172 @@ body {
   transition: 250ms background-color, 250ms color;
 }
 
-/* Assign grid instructions to our parent grid container, mobile-first (hide the sidenav) */
+.lightmode {
+  transition: all 250ms ease-in;
+}
+
+/* *GRIDBOX * -------------------------------------------------------------------*/
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 50px 1fr 50px;
   grid-template-areas:
-    'header'
-    'main'
-    'footer';
+    "header"
+    "main"
+    "footer";
   height: 100vh;
 }
 
+/* *HEADER * ---------------------------------------------------------------------*/
+.header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  background-color: #252529;
+  transition: 250ms background-color, 250ms color;
+}
+
+/* *SEARCH BAR * -----------------------------------------------------------------*/
+.header > form {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  max-height: 26px;
+  display: inline-block;
+  padding-left: 45px;
+  position: relative;
+}
+
+.header > form input[type="search"] {
+  appearance: none;
+  background-color: #1b1b1b;
+  border: none;
+  border-radius: 13px;
+  display: inline-block;
+  width: 26px;
+  padding: 0;
+  outline: none;
+  color: white;
+  font-size: 14px;
+  transition: 0.4s;
+  line-height: 26px;
+  font-weight: bold;
+  transition: 450ms;
+}
+
+.header > form:hover input[type="search"] {
+  width: 200px;
+  padding: 0 15px;
+}
+
+.header > form button {
+  position: absolute;
+  right: 0;
+  height: 26px;
+  width: 26px;
+  background-color: #1b1b1b;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  margin: 0;
+}
+
+.header > form button i {
+  color: #fff;
+  padding-right: 2px;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+/* *DARK & LIGHTMODE KNOP * -------------------------------------------------------*/
+.toggle-btn {
+  position: relative;
+  width: 55px;
+  height: 26px;
+  margin: 0px;
+  border-radius: 2.5em;
+}
+
+input[type="checkbox"] {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: 0px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#_1st-toggle-btn span {
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  overflow: hidden;
+  opacity: 1;
+  background-color: #2d2d2d;
+  border-radius: 20px;
+  transition: 0.2s ease background-color, 0.2s ease opacity;
+}
+
+#_1st-toggle-btn span:before,
+#_1st-toggle-btn span:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: 0.5s ease transform, 0.2s ease background-color;
+}
+
+#_1st-toggle-btn span:before {
+  background-color: #2d2d2d;
+  transform: translate(-17px, 0px) translateZ(0);
+  z-index: 1;
+}
+
+#_1st-toggle-btn span:after {
+  background-color: #fff;
+  transform: translate(4px, 0px);
+  z-index: 0;
+}
+
+#_1st-toggle-btn input[type="checkbox"]:checked + span {
+  background-color: #1b1b1b;
+}
+
+#_1st-toggle-btn input[type="checkbox"]:active + span {
+  opacity: 0.5;
+}
+
+#_1st-toggle-btn input[type="checkbox"]:checked + span:before {
+  background-color: #1b1b1b;
+  transform: translate(24px, -4.5px) translateZ(0);
+}
+
+#_1st-toggle-btn input[type="checkbox"]:checked + span:after {
+  background-color: #17c9b7;
+  transform: translate(31px, 0px);
+}
+
+/* *MENU ICON VOOR TELEFOON IN DE SIDEBAR  * -----------------------------------------*/
 .menu-icon {
-  position: fixed; /* Needs to stay visible for all mobile scrolling */
+  position: fixed;
   display: flex;
   top: 5px;
   left: 10px;
@@ -35,85 +189,10 @@ body {
   cursor: pointer;
   padding: 12px;
   width: 40px;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-/* Give every child element its grid name */
-.header {
-  grid-area: header;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 16px;
-  background-color: #252529;
-  transition: 250ms background-color, 250ms color;
-}
-
-.header__search {
-  background: #1b1b1b;
-  border-radius: 40px;
-  margin-left: 42px;
- }
-
- .header__search:hover > .header__input {
-  width: 200px;
-  padding: 0 6px;
- }
- 
- .header__search:hover > .buscar-btn {
-  background: #1b1b1d;
-  color: black;
- }
-
-.header__input {
-  /* display: inline-block; */
-  margin-left: 4px;
-  border: none;
-  background: none;
-  outline: none;
-  float: left;
-  padding: 0;
-  color: white;
-  font-size: 14px;
-  transition: 0.4s;
-  line-height: 26px;
-  width: 0px;
-  font-weight: bold;
- }
-
- .header__input::placeholder {
-  color: #fff;
-  opacity: 1; /* Firefox */
-}
-
-.header__input:-ms-input-placeholder { /* Internet Explorer 10-11 */
- color: #fff;
-}
-
-.header__input::-ms-input-placeholder { /* Microsoft Edge */
- color: #fff;
-}
-
-.buscar-btn {
-  width: 23px;
-  height: 23px;
-  border-radius: 50%;
-  background: #1b1b1b;
-  display: flex;
-  transition: 0.4s;
-  color: white;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
- }
- 
- .buscar-btn > i {
-  font-size: 15px;
- }
-
-/* Make room for the menu icon on mobile */
-
+/* *SIDE NAV  * -----------------------------------------------------------------------*/
 .sidenav {
   grid-area: sidenav;
   display: flex;
@@ -123,13 +202,9 @@ body {
   position: fixed;
   overflow-y: auto;
   transform: translateX(-245px);
-  transition: all .6s ease-in-out;
+  transition: 250ms background-color, 250ms color, 600ms transform;
   z-index: 2; /* Needs to sit above the hamburger menu icon */
-  background-color: #1b1b1d;
-}
-
-.lightmode {
-  transition: all 250ms ease-in;
+  background-color: #1b1b1b;
 }
 
 .sidenav.active {
@@ -179,12 +254,12 @@ body {
   margin-right: 10px;
 }
 
+/* *ITEMS IN DE GIRDBOX  * -------------------------------------------------------------*/
 .main {
   grid-area: main;
   background-color: #1c1c1f;
   transition: 250ms background-color, 250ms color;
 }
-
 
 .main-header {
   display: flex;
@@ -236,7 +311,6 @@ body {
   transition: 250ms background-color, 250ms color;
 }
 
-/* Force varying heights to simulate dynamic content */
 .card:first-child {
   height: 485px;
 }
@@ -261,97 +335,27 @@ body {
   margin-top: -9px;
 }
 
-.toggle-btn
-{
-  position: relative;
-  width: 55px;
-  height: 26px;
-  margin: 0px;
-  border-radius: 2.5em;
-}
-
-input[type="checkbox"]
-{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  margin: 0px;
-  cursor: pointer;
-  opacity: 0;
-  z-index: 2;
-}
-
-/* First toggle btn */
-
-#_1st-toggle-btn span
-{
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  overflow: hidden;
-  opacity: 1;
-  background-color: #2d2d2d;
-  border-radius: 20px;
-  transition: 0.2s ease background-color, 0.2s ease opacity;
-}
-
-#_1st-toggle-btn span:before,#_1st-toggle-btn span:after
-{
-  content: '';
-  position: absolute;
-  top: 3px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  transition: 0.5s ease transform, 0.2s ease background-color;
-}
-
-#_1st-toggle-btn span:before
-{
-  background-color: #2d2d2d;
-  transform: translate(-32px,0px);
-  z-index: 1;
-}
-
-#_1st-toggle-btn span:after
-{
-  background-color:#fff;
-  transform: translate(4px,0px);
-  z-index: 0;
-}
-
-#_1st-toggle-btn input[type="checkbox"]:checked + span
-{
-  background-color: #1b1b1b;
-}
-
-#_1st-toggle-btn input[type="checkbox"]:active + span
-{
-  opacity: 0.5;
-}
-
-#_1st-toggle-btn input[type="checkbox"]:checked + span:before
-{
-  background-color: #1b1b1b;
-  transform: translate(24px,-4.5px);
-}
-
-#_1st-toggle-btn input[type="checkbox"]:checked + span:after
-{
-  background-color: #17c9b7;
-  transform: translate(31px,0px);
-}
-
-/* First toggle btn completed */
-
+/* *LIGHTMODE * ------------------------------------------------------------------------*/
 body.lightmode .header {
   background-color: #efefef;
+}
+
+body.lightmode .header > form input[type="search"] {
+  background-color: #fff;
+  color: #1b1b1d;
+}
+
+body.lightmode .header > form button {
+  background-color: #fff;
+}
+
+body.lightmode .header > form button i {
+  color: #1b1b1b;
+}
+
+body.lightmode .menu-icon {
+  background-color: #fff;
+  color: #1b1b1b;
 }
 
 body.lightmode .sidenav {
@@ -359,16 +363,16 @@ body.lightmode .sidenav {
 }
 
 body.lightmode .fa-times {
-color: #1b1b1b;
+  color: #1b1b1b;
 }
 
 body.lightmode .sidenav__list-item a {
   color: #1c1c1f;
 }
 
-body.lightmode .main  {
+body.lightmode .main {
   background-color: white;
-  color: #1b1b1d;
+  color: #1b1b1b;
 }
 
 body.lightmode .main-header {
@@ -391,26 +395,8 @@ body.lightmode .footer__copyright {
   color: #1b1b1d;
 }
 
-body.lightmode .menu-icon {
-  background-color: #e2e1e1;
-}
-
-body.lightmode .header__search {
-background-color: #2d2d2d;
-}
-
-body.lightmode .header__search:hover > .buscar-btn {
-  background-color: #2d2d2d;
-}
-
-body.lightmode .buscar-btn {
-  background-color: #2d2d2d;
-}
-
-
-/* Non-mobile styles, 750px breakpoint */
+/* *MEDIA QUERIES TELEFOON * ------------------------------------------------------------------------*/
 @media only screen and (min-width: 46.875em) {
-  /* Show the sidenav */
   .grid-container {
     grid-template-columns: 240px 1fr;
     grid-template-areas:
@@ -436,10 +422,10 @@ body.lightmode .buscar-btn {
 .tijd {
   text-align: center;
 }
-/* Medium screens breakpoint (1050px) */
+
+/* *MEDIA QUERIES IPAD * ---------------------------------------------------------------------------*/
 @media only screen and (min-width: 65.625em) {
-  /* Break out main cards into two columns */
   .main-cards {
     column-count: 2;
   }
-} 
+}

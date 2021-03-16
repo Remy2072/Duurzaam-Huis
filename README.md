@@ -7,18 +7,26 @@
     <a href="https://github.com/Remy2072/Duurzaam-Huis/issues"><img src="https://img.shields.io/badge/contributions-welcome-ff69b4.svg" alt="Contributions Welcome"></a>
 </p>
 
-## Project: Duurzaam Huis
+### Onze site
 
-Dit is ons project **[Ecosy](https://24114.hosts1.ma-cloud.nl/DuurzaamHuis/index.html)**.
+[![Website](https://img.shields.io/badge/-Website-2e343f?logo=google&logoColor=white&style=for-the-badge)](https://kaansecen.nl/Projects/DuurzaamHuis/index.html)
 
-## Hoe clone je onze website?
+---
+
+### Hoe clone je onze website?
 
 ```sh
 git clone https://github.com/Remy2072/Duurzaam-Huis.git
 ```
 
-## Makers
 
+### Credits: 
 * [Remy Duivesteijn](https://github.com/Remy2072)
 * [Jaymar Westerlow](https://github.com/Jaywesterlow)
 * [Kaan Secen](https://github.com/KaanSecen)
+
+---
+
+Last edited on: 16/3/2021
+
+![Profile views](https://visitor-badge.glitch.me/badge?page_id=Remy.Remy)

@@ -1,6 +1,7 @@
-const menuIconEl = $('.menu-icon');
-const sidenavEl = $('.sidenav');
-const sidenavCloseEl = $('.sidenav__close-icon');
+//  *SIDE BAR & MENU ICON ---------------------------------------------------
+const menuIconEl = $(".menu-icon");
+const sidenavEl = $(".sidenav");
+const sidenavCloseEl = $(".sidenav__close-icon");
 
 // Add and remove provided class names
 function toggleClassName(el, className) {
@@ -11,16 +12,15 @@ function toggleClassName(el, className) {
   }
 }
 
-// Open the side nav on click
-menuIconEl.on('click', function() {
-  toggleClassName(sidenavEl, 'active');
+menuIconEl.on("click", function () {
+  toggleClassName(sidenavEl, "active");
 });
 
-// Close the side nav on click
-sidenavCloseEl.on('click', function() {
-  toggleClassName(sidenavEl, 'active');
+sidenavCloseEl.on("click", function () {
+  toggleClassName(sidenavEl, "active");
 });
 
+// *DARKMODE BUTTON -----------------------------------------------------
 var toggleDarkmode = document.querySelector(".toggle-btn input");
 
 // console.log(toggleDarkmode);
@@ -35,10 +35,8 @@ function toggleDarkmodeAppearance() {
   }
 }
 
-
-// Tijd
-
-function start () {
+// *TIJD WIDGET --------------------------------------------------------
+function start() {
   setInterval(function () {
     let time = new Date();
     let sec = time.getSeconds();
@@ -60,14 +58,14 @@ function start () {
     }
     clockdisplay(hr, min, sec, day);
   }, 100);
-  
-  function clockdisplay (hr, min, sec, day){
+
+  function clockdisplay(hr, min, sec, day) {
     let clock = document.getElementById("display");
     clock.innerHTML = hr + ":" + min + ":" + sec + "" + day;
   }
-  
+
   var now = new Date();
-  
+
   var days = new Array(
     "Zondag",
     "Maandag",
@@ -77,7 +75,7 @@ function start () {
     "Vrijdag",
     "Zaterdag"
   );
-  
+
   var months = new Array(
     "Januari",
     "Februari",
@@ -92,28 +90,27 @@ function start () {
     "November",
     "December"
   );
-  
+
   var date = (now.getDate() < 10 ? "0" : "") + now.getDate();
-  
+
   function fourdigits(number) {
     return number < 1000 ? number + 1900 : number;
   }
   today =
     days[now.getDay()] +
+    ", " +
+    date +
     " " +
     months[now.getMonth()] +
     " " +
-    date +
-    " " +
     fourdigits(now.getYear());
-  
-  console.log(today);
+
+  console.log(date);
   var dag = document.getElementById("dagmaandjaar");
   dag.innerHTML = today;
   var place = Intl.DateTimeFormat().resolvedOptions().timeZone;
   plek = document.getElementById("places");
   plek.innerHTML = place;
-  
 }
 
-window.addEventListener('DOMContentLoaded', start);
+window.addEventListener("DOMContentLoaded", start);
