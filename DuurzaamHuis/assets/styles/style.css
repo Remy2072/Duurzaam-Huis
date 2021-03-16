@@ -290,6 +290,14 @@ input[type="checkbox"] {
   transition: 250ms background-color, 250ms color;
 }
 
+.tijdcard {
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #252529;
+  border-radius: 0.4em;
+  transition: 250ms background-color, 250ms color;
+}
+
 .main-cards {
   column-count: 1;
   column-gap: 20px;
@@ -300,7 +308,7 @@ input[type="checkbox"] {
 .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   width: 100%;
   background-color: #252529;
   margin-bottom: 20px;
@@ -383,6 +391,15 @@ body.lightmode .overviewcard {
   background-color: #efefef;
 }
 
+body.lightmode .tijdcard {
+  background-color: #efefef;
+}
+
+body.lightmode .txtb {
+  border-bottom: 2px solid #1b1b1b;
+  color: #1b1b1b;
+}
+
 body.lightmode .card {
   background-color: #efefef;
 }
@@ -393,6 +410,53 @@ body.lightmode .footer {
 
 body.lightmode .footer__copyright {
   color: #1b1b1d;
+}
+
+
+.container{
+  max-width: 800px;
+}
+
+.txtb{
+  width: 90%;
+  border: none;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  background: none;
+  padding: 10px;
+  outline: none;
+  font-size: 18px;
+}
+
+h3{
+  margin: 10px 0;
+}
+
+.task{
+  width: 85%;
+  background: rgba(255,255,255,0.5);
+  padding: 18px;
+  margin: 6px 0;
+  overflow: hidden;
+}
+
+.task i{
+  float: right;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.comp .task{
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+}
+
+::-moz-selection { /* Code for Firefox */
+  background: #78c0b9;
+}
+
+::selection {
+  background: #78c0b9;
 }
 
 /* *MEDIA QUERIES TELEFOON * ------------------------------------------------------------------------*/
