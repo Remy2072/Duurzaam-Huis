@@ -29,4 +29,4 @@ git clone https://github.com/Remy2072/Duurzaam-Huis.git
 
 Last edited on: 16/3/2021
 
-![Profile views](https://visitor-badge.glitch.me/badge?page_id=Remy.Remy)
+![Profile views](https://visitor-badge.glitch.me/badge?page_id=ecosy.ecosy)
