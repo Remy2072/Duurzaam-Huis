@@ -105,12 +105,82 @@ function TijdDatumLocatie() {
     " " +
     fourdigits(now.getYear());
 
-  console.log(date);
   var dag = document.getElementById("dagmaandjaar");
   dag.innerHTML = today;
   var place = Intl.DateTimeFormat().resolvedOptions().timeZone;
   plek = document.getElementById("places");
   plek.innerHTML = place;
 }
+
+// To do list alles
+$(".txtb").on("keyup", function (e) {
+  //13  means enter button
+  if (e.keyCode == 13 && $(".txtb").val() != "") {
+    var task = $("<div class='task'></div>").text($(".txtb").val());
+    var del = $("<i class='fas fa-trash-alt'></i>").click(function () {
+      var p = $(this).parent();
+      p.fadeOut(function () {
+        p.remove();
+      });
+    });
+
+    var check = $("<i class='fas fa-check'></i>").click(function () {
+      var p = $(this).parent();
+      p.fadeOut(function () {
+        $(".comp").append(p);
+        p.fadeIn();
+      });
+      $(this).remove();
+    });
+
+    task.append(del, check);
+    $(".notcomp").append(task);
+    //to clear the input
+    $(".txtb").val("");
+  }
+});
+
+//einde to do list
+
+// Begin Weer
+let weer = document.getElementById("city");
+let weerdescription = document.getElementById("weatherdescription");
+let temperatuur = document.getElementById("temperature");
+
+
+if (navigator.geolocation) {
+  //Return the user's longitude and latitude on page load using HTML5 geolocation API
+  window.onload = function () {
+    navigator.geolocation.getCurrentPosition(getCurrentLocation);
+  };
+}
+
+
+
+function getCurrentLocation(position) {
+  latitude = position.coords.latitude;
+  longitude = position.coords.longitude;
+
+
+  weer.innerHTML = '';
+  weerdescription.innerHTML = '';
+  temperatuur.innerHTML = '';
+
+
+  $.getJSON(
+    "https://api.openweathermap.org/data/2.5/weather?lat=" +
+      latitude +
+      "&lon=" +
+      longitude +
+      "&APPID=b7aaa3a349294d5706002e82df3de1ea&units=metric",
+    function (data) {
+      $(".city")[0].append(data.name + " ");
+      $(".temperature")[0].append(data.main.temp + "°C");
+      $(".weatherdescription")[0].append(data.weather[0].description + " ");
+    }
+  );
+}
+
+// Einde weer
 
 window.addEventListener("DOMContentLoaded", TijdDatumLocatie);

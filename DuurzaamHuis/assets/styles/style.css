@@ -292,7 +292,15 @@ input[type="checkbox"] {
 
 .tijdcard {
   justify-content: space-between;
-  padding: 20px;
+  padding: 13px;
+  background-color: #252529;
+  border-radius: 0.4em;
+  transition: 250ms background-color, 250ms color;
+}
+
+.weercard {
+  justify-content: space-between;
+  padding: 13px;
   background-color: #252529;
   border-radius: 0.4em;
   transition: 250ms background-color, 250ms color;
@@ -395,6 +403,10 @@ body.lightmode .tijdcard {
   background-color: #efefef;
 }
 
+body.lightmode .weercard {
+  background-color: #efefef;
+}
+
 body.lightmode .txtb {
   border-bottom: 2px solid #1b1b1b;
   color: #1b1b1b;
@@ -452,11 +464,32 @@ h3{
 }
 
 ::-moz-selection { /* Code for Firefox */
-  background: #78c0b9;
+  background: #53c7bb;
 }
 
 ::selection {
-  background: #78c0b9;
+  background: #53c7bb;
+}
+
+/* Scroll bar (Werkt nog niet op firefox) */
+::-webkit-scrollbar{
+  background-color: none;
+  width: 6px;
+}
+
+::-webkit-scrollbar-track{
+  border-radius: 5px;
+  box-shadow: insert 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background-color: #129b8d;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  border-radius: 5px;
+  background-color: #17c9b7;
 }
 
 /* *MEDIA QUERIES TELEFOON * ------------------------------------------------------------------------*/
@@ -487,9 +520,39 @@ h3{
   text-align: center;
 }
 
+.weatherbox {
+  text-align: center;
+}
+
+.city {
+  font-size: 16px;
+}
+
+.temperature {
+  font-size: 24px;
+}
+
+.weatherdescription {
+  font-size: 16px;
+}
+
+#dagmaandjaar {
+  font-size: 16px;
+}
+
+#display {
+  font-size: 24px;
+}
+
+#places {
+  font-size: 16px;
+}
+
 /* *MEDIA QUERIES IPAD * ---------------------------------------------------------------------------*/
 @media only screen and (min-width: 65.625em) {
   .main-cards {
     column-count: 2;
   }
 }
+
+

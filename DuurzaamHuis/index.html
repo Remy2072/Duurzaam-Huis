@@ -89,8 +89,14 @@
         </div>
 
         <div class="main-overview">
-          <div class="overviewcard">
-            <div class="overviewcard__icon">Weer</div>
+          <div class="weercard">
+            <div class="overviewcard__icon">
+              <div class="weatherbox">
+                <div class="city" id="city">Het weer</div>
+                <div class="temperature" id="temperature">Accepteer Locatie</div>
+                <div class="weatherdescription" id="weatherdescription">Aan het wachten voor locatie..</div>
+              </div>
+            </div>
           </div>
           <div class="overviewcard">
             <div class="overviewcard__icon">Temp thuis</div>
@@ -101,11 +107,11 @@
           <div class="tijdcard">
             <div class="overviewcard__icon">
               <div class="tijd">
-                <div id="dagmaandjaar">DGJ</div>
+                <div id="dagmaandjaar"></div>
                 <div class="clock">
                   <div id="display"></div>
                 </div>
-                <div id="places">L</div>
+                <div id="places"></div>
               </div>
             </div>
           </div>
@@ -114,14 +120,10 @@
         <div class="main-cards">
           <div class="card">
             <div class="container">
-              <input type="text" class="txtb" placeholder="Add a task">
+              <input type="text" class="txtb" placeholder="Add a task" />
               <div class="notcomp">
                 <h3>Not Completed</h3>
-        
-        
-        
               </div>
-        
               <div class="comp">
                 <h3>Completed</h3>
               </div>
@@ -142,34 +144,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="assets/scripts/js/main.js"></script>
-    <script type="text/javascript">
-      $(".txtb").on("keyup",function(e){
-        //13  means enter button
-        if(e.keyCode == 13 && $(".txtb").val() != "")
-        {
-          var task = $("<div class='task'></div>").text($(".txtb").val());
-          var del = $("<i class='fas fa-trash-alt'></i>").click(function(){
-            var p = $(this).parent();
-            p.fadeOut(function(){
-              p.remove();
-            });
-          });
-
-          var check = $("<i class='fas fa-check'></i>").click(function(){
-            var p = $(this).parent();
-            p.fadeOut(function(){
-              $(".comp").append(p);
-              p.fadeIn();
-            });
-            $(this).remove();
-          });
-
-          task.append(del,check);
-          $(".notcomp").append(task);
-            //to clear the input
-          $(".txtb").val("");
-        }
-      });
-    </script>
+    <script type="text/javascript"></script>
   </body>
 </html>
