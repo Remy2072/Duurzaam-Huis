@@ -344,11 +344,11 @@ input[type="checkbox"] {
   display: flex;
   align-items: center;
   padding: 0 16px;
-  background-color: #1c1c1f;
+  background-color: #252529;
   color: #646278;
   font-weight: 700;
   transition: 250ms background-color, 250ms color;
-  margin-top: -9px;
+  /* margin-top: -9px; */
 }
 
 /* *LIGHTMODE * ------------------------------------------------------------------------*/
