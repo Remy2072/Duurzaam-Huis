@@ -31,7 +31,7 @@
 
         <div style="margin-bottom: 15px" class="textbox">
           <input
-            type="text"
+            type="email"
             id="uname"
             placeholder="Email Address"
             name="uname"
@@ -101,7 +101,7 @@
         var inputs = $(".textbox input");
         if (inputs[1].value.length > 7) {
           if (inputs[2].value == inputs[3].value) {
-            if (inputs[2].value && inputs[3].value > 7) {
+            if (inputs[2].value.length && inputs[3].value.length > 7) {
               if (
                 inputs[0].value != "" &&
                 inputs[1].value &&

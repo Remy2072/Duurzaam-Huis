@@ -24,7 +24,7 @@
       <form action="logincheck.php" method="POST">
         <div style="margin-bottom: 15px" class="textbox">
           <input
-            type="text"
+            type="email"
             id="uname"
             placeholder="Email Address"
             name="uname"
@@ -82,7 +82,7 @@
 
       $(".textbox input").keyup(function () {
         var inputs = $(".textbox input");
-        if (inputs[0].value != "" && inputs[1].value) {
+        if (inputs[0].value.length > 7 && inputs[1].value.length > 7) {
           $(".login-btn").attr("disabled", false);
           $(".login-btn").addClass("active");
         } else {
