@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
   </head>
   <body>
-    
      <!-- *VORMGEVING VAN DE LOGIN PAGINA -->
     <div class="login-form">
       <div style="margin-bottom: 25px" class="logo">
@@ -21,13 +20,18 @@
       <!-- *ALLE TEXT IN DE LOGIN PAGINA -->
       <h6>Sign in</h6>
 
-      <form action="logincheck.php" method="POST">
+      <form action="" method="POST">
+        <div style="margin-bottom: 15px" class="textbox">
+          <input type="text" id="name" placeholder="Name" name="name" />
+          <span class="check-message hidden">Required</span>
+        </div>
+
         <div style="margin-bottom: 15px" class="textbox">
           <input
             type="email"
             id="uname"
             placeholder="Email Address"
-            name="uname"
+            name="ename"
           />
           <span class="check-message hidden">Required</span>
         </div>
@@ -59,10 +63,45 @@
           type="submit"
           value="Log In Now"
           class="login-btn"
+          name="loginbtn"
           id="login-style"
           disabled
         />
         <div class="privacy-link">
+          <span style="color:crimson;">
+          <?php
+          include "config.php";
+
+
+          if(isset($_POST['loginbtn'])){
+
+              $name = mysqli_real_escape_string($con,$_POST['name']);
+              $uname = mysqli_real_escape_string($con,$_POST['ename']);
+              $password = mysqli_real_escape_string($con,$_POST['pname']);
+
+
+              if ($uname != "" && $password != "" && $name != ""){
+
+                  $sql_query = "select count(*) as cntUser from users where email='".$uname."' and password='".$password."' and name='".$name."'";
+                  $result = mysqli_query($con,$sql_query);
+                  $row = mysqli_fetch_array($result);
+
+                  $count = $row['cntUser'];
+
+                  if($count > 0){
+                      $_SESSION['ename'] = $uname;
+                      $_SESSION['name'] = $name;
+                      header('Location: ../index.php');
+                  }else{
+                      echo "Invalid username and password";
+                  }
+
+              }
+
+          }
+          ?>
+          <br><br></span>
+          <a href="signup.html">Create Account<br><br></a>
           <a href="Ecosy_-_Privacy_policy.pdf" target="_blank">Privacy Policy</a>
         </div>
       </form>
@@ -82,7 +121,7 @@
 
       $(".textbox input").keyup(function () {
         var inputs = $(".textbox input");
-        if (inputs[0].value.length > 7 && inputs[1].value.length > 7) {
+        if (inputs[1].value.length > 7 && inputs[2].value.length > 7) {
           $(".login-btn").attr("disabled", false);
           $(".login-btn").addClass("active");
         } else {

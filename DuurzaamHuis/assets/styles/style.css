@@ -552,6 +552,16 @@ h3{
   font-size: 16px;
 }
 
+tg {
+	background: none;
+	color: yellow;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
 /* *MEDIA QUERIES IPAD * ---------------------------------------------------------------------------*/
 @media only screen and (min-width: 65.625em) {
   .main-cards {
