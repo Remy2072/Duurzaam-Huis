@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap%22");
+
+body {
+  background-color: #1c1c1f;
+  margin: 0;
+  margin-right: 30px;
+  color: white;
+}
+
+.item {
+    background-color: #252529;
+}
+
+#dashboard {
+    display: grid;
+    grid-template-columns: 100px 200px;
+    grid-template-rows: 100px 100px 100px;
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+}
+
+.sidebar {
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.bar1{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    border-radius: 0.4em;
+}
+
+#display {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+#dagmaandjaar {
+    font-family: "Montserrat", sans-serif;
+}
+
+#place {
+    font-family: "Montserrat", sans-serif;
+}
+
+#temperature {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+#Status {
+    font-family: "Montserrat", sans-serif;
+}
+
+.LogoEcosy {
+    width: 85px;
+    margin: 5px;
+}
+
+.pficon {
+    width: 85px;
+    margin: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #252529;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+#progress {
+    text-align: center;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+}

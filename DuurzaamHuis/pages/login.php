@@ -3,6 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <title>Ecosy | Login</title>
+    <meta
+      content="Bespaar nu energie met Ecosy, Snel en simple.<br>
+    Ecosy is een duurzame oplossing voor het energie besparen in jouw huis, 
+    tevens is Ecosy ook te gebruiken als app voor je smart hoop apparatuur.<br>
+    Begin nu een duurzaam huis met Ecosy!"
+      property="og:description"
+    />
+    <meta
+      content="https://kaansecen.nl/Projects/DuurzaamHuis/pages/signup.html"
+      property="og:url"
+    />
     <link rel="stylesheet" href="../assets/styles/login.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="../assets/images/EcosyIconWebsite.svg" />

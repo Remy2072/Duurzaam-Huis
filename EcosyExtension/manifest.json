@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "EcosyPlus",
+  "description": "Bespaar nu energie met EcosyPlus, Snel en simple.",
+  "author":"Kaan Secen",
+  "version": "0.0.7",
+  "icons": {
+    "16": "Ecosy48.png", 
+    "48": "Ecosy48.png",
+    "128": "Ecosy128.png"
+  },
+  "browser_action": {
+    "default_icon": "Ecosy.png",
+    "default_popup": "popup.html",
+    "default_title":"EcosyPlus"
+  },
+  "permissions": [
+    "geolocation",
+    "alarms",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}

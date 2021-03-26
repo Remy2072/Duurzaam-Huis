@@ -28,7 +28,7 @@ if(isset($_POST['but_logout'])){
       property="og:description"
     />
     <meta
-      content="https://24114.hosts1.ma-cloud.nl/DuurzaamHuis/index.html"
+      content="https://kaansecen.nl/Projects/DuurzaamHuis/pages/signup.html"
       property="og:url"
     />
     <meta content="https://i.imgur.com/TJVBH4d.jpg" property="og:image" />
@@ -89,10 +89,11 @@ if(isset($_POST['but_logout'])){
           </li>
           <li class="sidenav__list-item">
           <form method='post' action="">
-            <a><i class="fas fa-sign-out-alt fa-rotate-180"></i>
-            <input type="submit" value="Log out" name="but_logout" style="background: yellow;outline: inherit;border: none;font-size: 16px;">
+            <button type="submit" name="but_logout" style="background-color:none;outline: inherit;border: none;font-size: 16px;">            
+              <i class="fas fa-sign-out-alt fa-rotate-180"></i>
+              Log out
+            </button>
             </form>
-            </a>
           </li>
         </ul>
       </aside>
@@ -173,7 +174,7 @@ if(isset($_POST['but_logout'])){
         <div class="main-cards">
           <div class="card">
             <div class="container">
-              <input type="text" class="txtb" placeholder="Add a task" />
+              <input type="text" class="txtb" placeholder="Add a task" maxlength="35" id="todoinput" />
               <div class="notcomp">
                 <h3>Not Completed</h3>
               </div>

@@ -247,6 +247,18 @@ input[type="checkbox"] {
   color: white;
   padding: 20px 20px 20px 40px;
   display: block;
+
+}
+.sidenav__list-item button {
+  background-color: transparent;
+  padding: 20px 20px 20px 40px;
+  appearance: none;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  display: block;
+  color: white;
+  text-align: left;
 }
 
 .sidenav__list-item:hover {
@@ -422,6 +434,10 @@ body.lightmode .card {
 
 body.lightmode .footer {
   background-color: white;
+}
+
+body.lightmode .temp {
+  fill: #1b1b1b;
 }
 
 body.lightmode .footer__copyright {
@@ -609,6 +625,7 @@ body {
   
   .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
+    border: none;
     appearance: none;
     width: 15px;
     height: 15px;
@@ -618,8 +635,9 @@ body {
   }
   
   .slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
+    border: none;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background: #17C9B7;
     cursor: pointer;

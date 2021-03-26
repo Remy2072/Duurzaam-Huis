@@ -113,40 +113,83 @@ function TijdDatumLocatie() {
 }
 
 // To do list alles
+var todolim = 5;
 $(".txtb").on("keyup", function (e) {
   //13  means enter button
   if (e.keyCode == 13 && $(".txtb").val() != "") {
-    var task = $("<div class='task'></div>").text($(".txtb").val());
-    var del = $("<i class='fas fa-trash-alt'></i>").click(function () {
-      var p = $(this).parent();
-      p.fadeOut(function () {
-        p.remove();
-      });
-    });
+    if (
+      todolim == 5 ||
+      todolim == 4 ||
+      todolim == 3 ||
+      todolim == 2 ||
+      todolim == 1
+    ) {
+      var task = $("<div class='task'></div>").text($(".txtb").val());
+    }
 
-    var check = $("<i class='fas fa-check'></i>").click(function () {
-      var p = $(this).parent();
-      p.fadeOut(function () {
-        $(".comp").append(p);
-        p.fadeIn();
+    if (
+      todolim == 5 ||
+      todolim == 4 ||
+      todolim == 3 ||
+      todolim == 2 ||
+      todolim == 1
+    ) {
+      var del = $("<i class='fas fa-trash-alt'></i>").click(function () {
+        var p = $(this).parent();
+        p.fadeOut(function () {
+          todolim += 1;
+          p.remove();
+        });
       });
-      $(this).remove();
-    });
+    }
 
-    task.append(del, check);
-    $(".notcomp").append(task);
-    //to clear the input
-    $(".txtb").val("");
+    if (
+      todolim == 5 ||
+      todolim == 4 ||
+      todolim == 3 ||
+      todolim == 2 ||
+      todolim == 1
+    ) {
+      var check = $("<i class='fas fa-check'></i>").click(function () {
+        var p = $(this).parent();
+        p.fadeOut(function () {
+          $(".comp").append(p);
+          p.fadeIn();
+        });
+        $(this).remove();
+      });
+    }
+
+    if (
+      todolim == 5 ||
+      todolim == 4 ||
+      todolim == 3 ||
+      todolim == 2 ||
+      todolim == 1
+    ) {
+      todolim -= 1;
+      task.append(del, check);
+      $(".notcomp").append(task);
+      //to clear the input
+      $(".txtb").val("");
+    }
   }
 });
 
+var mq = window.matchMedia("(min-width: 46.875em)");
+if (mq.matches) {
+  // window width is at less than 570px
+} else {
+  // window width is greater than 570px
+  let inputtodo = document.getElementById("todoinput");
+  inputtodo.setAttribute("maxlength", "18"); 
+}
 //einde to do list
 
 // Begin Weer
 let weer = document.getElementById("city");
 let weerdescription = document.getElementById("weatherdescription");
 let temperatuur = document.getElementById("temperature");
-
 
 if (navigator.geolocation) {
   //Return the user's longitude and latitude on page load using HTML5 geolocation API
@@ -155,17 +198,13 @@ if (navigator.geolocation) {
   };
 }
 
-
-
 function getCurrentLocation(position) {
   latitude = position.coords.latitude;
   longitude = position.coords.longitude;
 
-
-  weer.innerHTML = '';
-  weerdescription.innerHTML = '';
-  temperatuur.innerHTML = '';
-
+  weer.innerHTML = "";
+  weerdescription.innerHTML = "";
+  temperatuur.innerHTML = "";
 
   $.getJSON(
     "https://api.openweathermap.org/data/2.5/weather?lat=" +
@@ -184,13 +223,6 @@ function getCurrentLocation(position) {
 // Einde weer
 
 window.addEventListener("DOMContentLoaded", TijdDatumLocatie);
-
-
-
-
-
-
-
 
 let temperatuur2 = 9;
 const temperatuurUitvoer = document.getElementById("temperatuur2");
