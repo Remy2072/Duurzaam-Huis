@@ -74,7 +74,6 @@ function TijdDatumLocatie() {
   plek.innerHTML = place;
 }
 
-// Weer
 function sendMessage() {
   chrome.runtime.sendMessage(
     { action: "getCurrentForecast" },
@@ -101,7 +100,6 @@ function showResult(response) {
     response.currently.temperature.toString().split(".")[0] + "˚C";
 }
 
-// Download speed
 var imageAddr =
   "http://www.kenrockwell.com/contax/images/g2/examples/31120037-5mb.jpg";
 var downloadSize = 4995374; //bytes

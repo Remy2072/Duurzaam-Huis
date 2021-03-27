@@ -106,9 +106,7 @@
                   }else{
                       echo "Invalid username and password";
                   }
-
               }
-
           }
           ?>
           <br><br></span>

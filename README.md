@@ -9,24 +9,31 @@
 
 ### Onze site
 
-[![Website](https://img.shields.io/badge/-Website-2e343f?logo=google&logoColor=white&style=for-the-badge)](https://kaansecen.nl/Projects/DuurzaamHuis/index.html)
+[![Website](https://img.shields.io/badge/-Website-2e343f?logo=google&logoColor=white&style=for-the-badge)](https://kaansecen.nl/Projects/DuurzaamHuis/pages/login.php)
+[![Trello](https://img.shields.io/badge/-trello-2e343f?logo=Trello&logoColor=white&style=for-the-badge)](https://trello.com/b/ZbAc4eNT/team-ez-10)
 
 ---
 
-### Hoe clone je onze website?
+### hoe maak je een account op ecosy 
 
-```sh
-git clone https://github.com/Remy2072/Duurzaam-Huis.git
-```
+- #### stap 1 vul je username in 
+ 
+- #### stap 2 vul een geldig email adres in 
 
+- #### stap 3 verzin een wachtwoord van minimaal 7 kaakters 
+
+- #### stap 4 herhaal het wachtwoord 
+
+- #### stap 5 druk op create account en log in succes
+
+---
 
 ### Credits: 
 * [Remy Duivesteijn](https://github.com/Remy2072)
 * [Jaymar Westerlow](https://github.com/Jaywesterlow)
 * [Kaan Secen](https://github.com/KaanSecen)
-
 ---
 
-Last edited on: 16/3/2021
+##### Last edited on: 16/3/2021
 
 ![Profile views](https://visitor-badge.glitch.me/badge?page_id=ecosy.ecosy)

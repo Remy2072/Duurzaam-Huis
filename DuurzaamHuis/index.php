@@ -76,7 +76,7 @@ if(isset($_POST['but_logout'])){
         </div>
         <ul class="sidenav__list">
           <li class="sidenav__list-item">
-            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="index.php"><i class="fas fa-home"></i> Home</a>
           </li>
           <li class="sidenav__list-item">
             <a href="#"><i class="fas fa-user"></i> Profiel</a>
@@ -88,11 +88,11 @@ if(isset($_POST['but_logout'])){
             <a href="#"><i class="fas fa-puzzle-piece"></i> Extensie </a>
           </li>
           <li class="sidenav__list-item">
-          <form method='post' action="">
-            <button type="submit" name="but_logout" style="background-color:none;outline: inherit;border: none;font-size: 16px;">            
-              <i class="fas fa-sign-out-alt fa-rotate-180"></i>
-              Log out
-            </button>
+            <form method="post" action="">
+              <button type="submit" name="but_logout">
+                <i class="fas fa-sign-out-alt fa-rotate-180"></i>
+                Log out
+              </button>
             </form>
           </li>
         </ul>
@@ -101,32 +101,54 @@ if(isset($_POST['but_logout'])){
       <!-- *ITEMS IN HET GRID-->
       <main class="main">
         <div class="main-header">
-          <div class="main-header__heading">Welkom, <span>
-            <?php
+          <div class="main-header__heading">
+            Welkom,
+            <span>
+              <?php
               echo $_SESSION['name'];
-            ?>
-          </span><br><span style="font-size: 15px; color: #5288e5;">hoe gaat het vandaag?</span></div>
-          <div class="main-header__updates">Status: <span style="color: #21dc2d;">Online</span><br><br>Bluetooth: <span style="color: #196ae4;">On</span></div>
+            ?> </span
+            ><br /><span style="font-size: 15px; color: #5288e5"
+              >hoe gaat het vandaag?</span
+            >
+          </div>
+          
+          <div class="main-header__updates">
+            Status: <span style="color: #21dc2d">Online</span
+            ><br /><br />Bluetooth: <span style="color: #196ae4">On</span>
+          </div>
         </div>
-
+        
+        <!-- *WEER WIDGET -->
         <div class="main-overview">
           <div class="weercard">
             <div class="overviewcard__icon">
               <div class="weatherbox">
                 <div class="city" id="city">Het weer</div>
-                <div class="temperature" id="temperature">Accepteer Locatie</div>
-                <div class="weatherdescription" id="weatherdescription">Aan het wachten voor locatie..</div>
+                <div class="temperature" id="temperature">
+                  Accepteer Locatie
+                </div>
+                <div class="weatherdescription" id="weatherdescription">
+                  Aan het wachten voor locatie..
+                </div>
               </div>
             </div>
           </div>
+          
+          <!-- *TEMP WIDGET -->
           <div class="overviewcard">
-            <span style="font-size: 16px;">
+            <span style="font-size: 16px">
               Temp. binnen:
-              <input class="slider" type="range" min="1" max="30" step="1" value="21" id="thermostaat" />
+              <input
+                class="slider"
+                type="range"
+                min="1"
+                max="30"
+                step="1"
+                value="21"
+                id="thermostaat"
+              />
             </span>
             <div class="overviewcard__icon">
-              
-
               <svg width="95px" height="95px" viewbox="0 0 40 40">
                 <circle
                   cx="20"
@@ -152,9 +174,10 @@ if(isset($_POST['but_logout'])){
                   <text id="eenheid" x="54%" y="54%">&deg;C</text>
                 </g>
               </svg>
-              
             </div>
           </div>
+          
+          <!-- *SPOTIFY WIDGET -->
           <div class="overviewcard">
             <div class="overviewcard__icon">Spotify</div>
           </div>
@@ -172,9 +195,16 @@ if(isset($_POST['but_logout'])){
         </div>
 
         <div class="main-cards">
+          <!-- *TO DO LIST -->
           <div class="card">
             <div class="container">
-              <input type="text" class="txtb" placeholder="Add a task" maxlength="35" id="todoinput" />
+              <input
+                type="text"
+                class="txtb"
+                placeholder="Add a task"
+                maxlength="35"
+                id="todoinput"
+              />
               <div class="notcomp">
                 <h3>Not Completed</h3>
               </div>
@@ -183,7 +213,11 @@ if(isset($_POST['but_logout'])){
               </div>
             </div>
           </div>
+
+          <!-- *HUE LAMPEN -->
           <div class="card">Slider</div>
+
+          <!-- *GRAFIEK -->
           <div class="card">Staaf grafiek</div>
         </div>
       </main>
@@ -197,7 +231,6 @@ if(isset($_POST['but_logout'])){
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="assets/scripts/js/main.js"></script>
-    <script type="text/javascript"></script>
+    <script src="assets/scripts/main.js"></script>
   </body>
 </html>

@@ -1,9 +1,8 @@
-//  *SIDE BAR & MENU ICON ---------------------------------------------------
+//  *SIDE BAR & MENU ICON ------------------------------------------------
 const menuIconEl = $(".menu-icon");
 const sidenavEl = $(".sidenav");
 const sidenavCloseEl = $(".sidenav__close-icon");
 
-// Add and remove provided class names
 function toggleClassName(el, className) {
   if (el.hasClass(className)) {
     el.removeClass(className);
@@ -23,8 +22,6 @@ sidenavCloseEl.on("click", function () {
 // *DARKMODE BUTTON -----------------------------------------------------
 var toggleDarkmode = document.querySelector(".toggle-btn input");
 
-// console.log(toggleDarkmode);
-
 toggleDarkmode.addEventListener("click", toggleDarkmodeAppearance);
 
 function toggleDarkmodeAppearance() {
@@ -34,6 +31,71 @@ function toggleDarkmodeAppearance() {
     document.querySelector("body").classList.add("lightmode");
   }
 }
+
+// *WEER WIDGET ---------------------------------------------------------
+let weer = document.getElementById("city");
+let weerdescription = document.getElementById("weatherdescription");
+let temperatuur = document.getElementById("temperature");
+
+if (navigator.geolocation) {
+  window.onload = function () {
+    navigator.geolocation.getCurrentPosition(getCurrentLocation);
+  };
+}
+
+function getCurrentLocation(position) {
+  latitude = position.coords.latitude;
+  longitude = position.coords.longitude;
+
+  weer.innerHTML = "";
+  weerdescription.innerHTML = "";
+  temperatuur.innerHTML = "";
+
+  $.getJSON(
+    "https://api.openweathermap.org/data/2.5/weather?lat=" +
+      latitude +
+      "&lon=" +
+      longitude +
+      "&APPID=b7aaa3a349294d5706002e82df3de1ea&units=metric",
+    function (data) {
+      $(".city")[0].append(data.name + " ");
+      $(".temperature")[0].append(data.main.temp + "°C");
+      $(".weatherdescription")[0].append(data.weather[0].description + " ");
+    }
+  );
+}
+
+// *TEMP BINNEN ---------------------------------------------------------
+window.addEventListener("DOMContentLoaded", TijdDatumLocatie);
+
+let temperatuur2 = 9;
+const temperatuurUitvoer = document.getElementById("temperatuur2");
+const cirkelBoog = document.getElementById("cirkelBoog");
+const thermostaat = document.getElementById("thermostaat");
+
+const uitvoeren = (temp) => {
+  temperatuurUitvoer.innerHTML = temp;
+  let boog = (temp * 100) / 30;
+  cirkelBoog.style.strokeDasharray = `${boog} ${100 - boog}`;
+};
+const animeerUitvoer = (temp) => {
+  let t = 0;
+  const timer = setInterval(() => {
+    if (t <= temp) {
+      uitvoeren(t);
+
+      t++;
+    } else {
+      clearInterval(timer);
+    }
+  }, 25);
+};
+
+animeerUitvoer(thermostaat.value);
+
+thermostaat.addEventListener("change", () => {
+  animeerUitvoer(thermostaat.value);
+});
 
 // *TIJD WIDGET --------------------------------------------------------
 function TijdDatumLocatie() {
@@ -112,7 +174,7 @@ function TijdDatumLocatie() {
   plek.innerHTML = place;
 }
 
-// To do list alles
+// *TO DO LIST ----------------------------------------------------------
 var todolim = 5;
 $(".txtb").on("keyup", function (e) {
   //13  means enter button
@@ -170,7 +232,6 @@ $(".txtb").on("keyup", function (e) {
       todolim -= 1;
       task.append(del, check);
       $(".notcomp").append(task);
-      //to clear the input
       $(".txtb").val("");
     }
   }
@@ -178,77 +239,9 @@ $(".txtb").on("keyup", function (e) {
 
 var mq = window.matchMedia("(min-width: 46.875em)");
 if (mq.matches) {
-  // window width is at less than 570px
+  // *PC
 } else {
-  // window width is greater than 570px
+  // *MOBILE
   let inputtodo = document.getElementById("todoinput");
-  inputtodo.setAttribute("maxlength", "18"); 
+  inputtodo.setAttribute("maxlength", "18");
 }
-//einde to do list
-
-// Begin Weer
-let weer = document.getElementById("city");
-let weerdescription = document.getElementById("weatherdescription");
-let temperatuur = document.getElementById("temperature");
-
-if (navigator.geolocation) {
-  //Return the user's longitude and latitude on page load using HTML5 geolocation API
-  window.onload = function () {
-    navigator.geolocation.getCurrentPosition(getCurrentLocation);
-  };
-}
-
-function getCurrentLocation(position) {
-  latitude = position.coords.latitude;
-  longitude = position.coords.longitude;
-
-  weer.innerHTML = "";
-  weerdescription.innerHTML = "";
-  temperatuur.innerHTML = "";
-
-  $.getJSON(
-    "https://api.openweathermap.org/data/2.5/weather?lat=" +
-      latitude +
-      "&lon=" +
-      longitude +
-      "&APPID=b7aaa3a349294d5706002e82df3de1ea&units=metric",
-    function (data) {
-      $(".city")[0].append(data.name + " ");
-      $(".temperature")[0].append(data.main.temp + "°C");
-      $(".weatherdescription")[0].append(data.weather[0].description + " ");
-    }
-  );
-}
-
-// Einde weer
-
-window.addEventListener("DOMContentLoaded", TijdDatumLocatie);
-
-let temperatuur2 = 9;
-const temperatuurUitvoer = document.getElementById("temperatuur2");
-const cirkelBoog = document.getElementById("cirkelBoog");
-const thermostaat = document.getElementById("thermostaat");
-
-const uitvoeren = (temp) => {
-  temperatuurUitvoer.innerHTML = temp;
-  let boog = (temp * 100) / 30;
-  cirkelBoog.style.strokeDasharray = `${boog} ${100 - boog}`;
-};
-const animeerUitvoer = (temp) => {
-  let t = 0;
-  const timer = setInterval(() => {
-    if (t <= temp) {
-      uitvoeren(t);
-
-      t++;
-    } else {
-      clearInterval(timer);
-    }
-  }, 25);
-};
-
-animeerUitvoer(thermostaat.value);
-
-thermostaat.addEventListener("change", () => {
-  animeerUitvoer(thermostaat.value);
-});
