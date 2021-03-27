@@ -14,7 +14,7 @@
 
 ---
 
-### hoe maak je een account op ecosy 
+### Hoe maak je een account op ecosy 
 
 - #### stap 1 vul je username in 
  
