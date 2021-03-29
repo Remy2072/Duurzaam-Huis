@@ -520,6 +520,10 @@ body.lightmode .sidenav__list-item a {
   color: #1c1c1f;
 }
 
+body.lightmode .logoutButton{
+  color: #1c1c1f;
+}
+
 body.lightmode .main {
   background-color: #fff;
   color: #1b1b1b;
