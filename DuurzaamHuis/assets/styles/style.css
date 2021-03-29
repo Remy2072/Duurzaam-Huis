@@ -264,6 +264,10 @@ input[type="checkbox"] {
   margin-right: 10px;
 }
 
+.logoutButton {
+  font-family: "Montserrat", sans-serif;
+}
+
 /* *ITEMS IN DE GIRDBOX  * -------------------------------------------------------------*/
 
 /* *MAIN  * ----------------------------------------------------------------------------*/
@@ -521,7 +525,7 @@ body.lightmode .sidenav__list-item a {
 }
 
 body.lightmode .logoutButton{
-  color: #1c1c1f;
+  color: #1b1b1b;
 }
 
 body.lightmode .main {
