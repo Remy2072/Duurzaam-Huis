@@ -215,7 +215,11 @@ if(isset($_POST['but_logout'])){
           </div>
 
           <!-- *HUE LAMPEN -->
-          <div class="card">Slider</div>
+          <div class="card">
+            <span style="margin-bottom: 20px;text-align: center;font-size: 30px;">HUE Lampen</span>
+            <input type="range" min="1" max="100" value="1" id="myRange" class="slider1">
+            <input type="range" min="1" max="100" value="1" id="myRange2" class="slider2">
+          </div>
 
           <!-- *GRAFIEK -->
           <div class="card">Staaf grafiek</div>

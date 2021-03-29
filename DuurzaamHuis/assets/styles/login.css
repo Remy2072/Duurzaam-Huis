@@ -177,6 +177,13 @@ body {
   font-size: 14px;
 }
 
+/* *ERROR CODE  * ------------------------------------------------------------*/
+
+.error {
+  color:crimson;
+}
+
+
 /* *MEDIA QUERY VOOR TELEFOON * ----------------------------------------------*/
 @media screen and (max-width: 470px) {
   body {

@@ -33,7 +33,7 @@
 
       <form action="" method="POST">
         <div style="margin-bottom: 15px" class="textbox">
-          <input type="text" id="name" placeholder="Name" name="name" />
+          <input type="text" id="name" placeholder="Username" name="name" />
           <span class="check-message hidden">Required</span>
         </div>
 
