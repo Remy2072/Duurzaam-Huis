@@ -1,5 +1,5 @@
 /* *FONT * ----------------------------------------------------------------------------------------------------------------------*/
-  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap%22");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap%22");
 
 /* *BODY * ----------------------------------------------------------------------*/
 body {
@@ -50,7 +50,7 @@ body {
   margin: 0;
   max-height: 26px;
   display: inline-block;
-  padding-left: 45px;
+  padding-left: 4px;
   position: relative;
 }
 
@@ -92,7 +92,14 @@ body {
 
 .header > form button i {
   color: #fff;
-  padding-right: 2px;
+  padding-left: 1px;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
 }
 
 /* *DARK & LIGHTMODE KNOP * -------------------------------------------------------*/
@@ -383,7 +390,83 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-/* *SPOTIFY  * -------------------------------------------------------------------------*/ 
+/* *SPOTIFY  * -------------------------------------------------------------------------*/
+.spotify {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.spotify img {
+  height: 100%;
+  border-radius: 8px;
+}
+
+.spotify > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  flex: 1;
+}
+
+.spotify > div h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.spotify > div h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 300;
+  opacity: 0.65;
+}
+
+.spotify > svg {
+  height: 30px;
+  margin-right: 20px;
+  opacity: 0.65;
+  transition: 250ms;
+}
+
+.spotify > svg:hover {
+  opacity: 1;
+}
+
+.spotify > svg path {
+  transition: 250ms;
+}
+
+.spotify > svg:hover path {
+  fill: #17c9b7;
+  transition: 250ms;
+}
+
+.spotify button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+.spotify button:hover svg path {
+  fill: #17c9b7;
+}
+
+.spotify button svg {
+  height: 30px;
+}
+
+.spotify button svg path {
+  fill: #fff;
+  transition: 250ms;
+}
 
 /* *TIJD  * ----------------------------------------------------------------------------*/
 .tijdcard {
@@ -545,7 +628,6 @@ h3 {
   cursor: pointer;
 }
 
-
 .slider1:hover {
   opacity: 1;
 }
@@ -603,7 +685,7 @@ body.lightmode .sidenav__list-item a {
   color: #1c1c1f;
 }
 
-body.lightmode .logoutButton{
+body.lightmode .logoutButton {
   color: #1b1b1b;
 }
 
@@ -622,6 +704,14 @@ body.lightmode .weercard {
 
 body.lightmode .overviewcard {
   background-color: #efefef;
+}
+
+body.lightmode .spotify button svg path {
+  fill: #2d2d2d;
+}
+
+body.lightmode .spotify button:hover svg path {
+  fill: #17c9b7;
 }
 
 body.lightmode .temp {
@@ -679,6 +769,12 @@ body.lightmode .footer__copyright {
 }
 
 /* *MEDIA QUERIES TELEFOON * ------------------------------------------------------------------------*/
+@media only screen and (max-width: 478px) {
+  .header > form {
+    padding-left: 45px;
+  }
+}
+
 @media only screen and (min-width: 46.875em) {
   .grid-container {
     grid-template-columns: 240px 1fr;

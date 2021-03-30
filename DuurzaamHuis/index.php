@@ -179,8 +179,19 @@ if(isset($_POST['but_logout'])){
           
           <!-- *SPOTIFY WIDGET -->
           <div class="overviewcard">
-            <div class="overviewcard__icon">Spotify</div>
+            <div class="spotify">
+              <img src="assets/images/Between-Us.jpeg" alt="Between-Us">
+              <div>
+                <h3>Nowhere To Go</h3>
+                <h4>Hayden James</h4>
+              </div>
+            <audio id="testAudio" hidden src="assets/Songs/Hayden_James_-_Nowhere_To_Go.mp3" type="audio/mpeg"></audio>
+            <svg viewBox="0 0 24 24"><path d="M1,4.5 L1,16.5 C1,17.05 1.45,17.5 2,17.5 L8.999,17.5 L8.999,16.5 L2,16.5 L2,4.5 L8.999,4.5 L8.999,3.5 L2,3.5 C1.45,3.5 1,3.95 1,4.5 Z M4.999,20 C4.999,20.275 5.224,20.5 5.499,20.5 L8.999,20.5 L8.999,19.5 L5.499,19.5 C5.224,19.5 4.999,19.725 4.999,20 Z M22,3.5 L13,3.5 C12.45,3.5 12,3.95 12,4.5 L12,19.5 C12,20.05 12.45,20.5 13,20.5 L22,20.5 C22.55,20.5 23,20.05 23,19.5 L23,4.5 C23,3.95 22.55,3.5 22,3.5 Z M13.016,19.5 L13,4.516 L21.984,4.516 L22,19.484 L13.016,19.5 Z M17.5,11.5 C15.843,11.5 14.5,12.843 14.5,14.5 C14.5,16.157 15.843,17.5 17.5,17.5 C19.157,17.5 20.5,16.157 20.5,14.5 C20.5,12.843 19.157,11.5 17.5,11.5 Z M17.5,16.5 C16.397,16.5 15.5,15.603 15.5,14.5 C15.5,13.397 16.397,12.5 17.5,12.5 C18.603,12.5 19.5,13.397 19.5,14.5 C19.5,15.603 18.603,16.5 17.5,16.5 Z M17.5,8.5 C18.052,8.5 18.5,8.052 18.5,7.5 C18.5,6.948 18.052,6.5 17.5,6.5 C16.948,6.5 16.5,6.948 16.5,7.5 C16.5,8.053 16.948,8.5 17.5,8.5 Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+            <button id="playAudio"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 111.87 111.87"><defs><style>.cls-1{fill:#fff;}</style></defs><g id="Laag_2" data-name="Laag 2"><g id="Laag_1-2" data-name="Laag 1"><path class="cls-1" d="M55.94,0a55.94,55.94,0,1,0,55.93,55.94A55.93,55.93,0,0,0,55.94,0ZM75.71,57.51,44.87,75.34a1.82,1.82,0,0,1-2.73-1.58V38.11a1.82,1.82,0,0,1,2.73-1.58L75.71,54.36A1.82,1.82,0,0,1,75.71,57.51Z"></path></g></g></svg></button>
+            </div>
           </div>
+
+           <!-- *TIJD WIDGET -->
           <div class="tijdcard">
             <div class="overviewcard__icon">
               <div class="tijd">
@@ -194,8 +205,8 @@ if(isset($_POST['but_logout'])){
           </div>
         </div>
 
+        <!-- *TO DO LIST -->
         <div class="main-cards">
-          <!-- *TO DO LIST -->
           <div class="card">
             <div class="container">
               <input
@@ -222,10 +233,11 @@ if(isset($_POST['but_logout'])){
           </div>
 
           <!-- *GRAFIEK -->
-          <div class="card">Staaf grafiek</div>
+          <div class="card"></div>
         </div>
       </main>
 
+      <!-- *FOOTER -->
       <footer class="footer">
         <div class="footer__copyright">
           Copyright © <span style="color: #17c9b7">2021</span> All rights
@@ -233,6 +245,7 @@ if(isset($_POST['but_logout'])){
         </div>
       </footer>
     </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="assets/scripts/main.js"></script>
