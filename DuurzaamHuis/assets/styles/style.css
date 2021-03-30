@@ -805,12 +805,34 @@ body.lightmode .footer__copyright {
   }
 }
 
-.container {
+/* *MEDIA QUERIES MAC * ----------------------------------------------------------------------------
+@media only screen and (min-width: 192em) {
+  #canvas {
+    display: block;
+    max-width: 800px;
+    max-height: 400px;
+  }
+} */
+
+
+
+
+
+
+
+
+#canvas {
+  display: block;
+  /* max-width: 625px; */
+  max-height: 280px;
+  width: 100% !important;
+}
+
+.container2 {
   position: relative;
   height: 99%;
   width: 99%;
 }
-
 
 *,
 *:after,

@@ -1,17 +1,17 @@
 {
   "months_temperature": [
     {
-      "date": "January",
+      "date": "Januari",
       "avg": 10647,
       "your": 9565
     },
     {
-      "date": "February",
+      "date": "Februari",
       "avg": 10826,
       "your": 9744
     },
     {
-      "date": "March",
+      "date": "Maart",
       "avg": 11261,
       "your": 10177
     },
@@ -21,22 +21,22 @@
       "your": 10772
     },
     {
-      "date": "May",
+      "date": "Mei",
       "avg": 13068,
       "your": 11820
     },
     {
-      "date": "June",
+      "date": "Juni",
       "avg": 13705,
       "your": 12456
     },
     {
-      "date": "July",
+      "date": "Juli",
       "avg": 14298,
       "your": 13049
     },
     {
-      "date": "August",
+      "date": "Augustus",
       "avg": 14084,
       "your": 12835
     },
@@ -46,7 +46,7 @@
       "your": 12371
     },
     {
-      "date": "October",
+      "date": "Oktober",
       "avg": 12753,
       "your": 11504
     },
