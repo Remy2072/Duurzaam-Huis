@@ -1,0 +1,64 @@
+{
+  "months_temperature": [
+    {
+      "date": "January",
+      "avg": 10647,
+      "your": 9565
+    },
+    {
+      "date": "February",
+      "avg": 10826,
+      "your": 9744
+    },
+    {
+      "date": "March",
+      "avg": 11261,
+      "your": 10177
+    },
+    {
+      "date": "April",
+      "avg": 12187,
+      "your": 10772
+    },
+    {
+      "date": "May",
+      "avg": 13068,
+      "your": 11820
+    },
+    {
+      "date": "June",
+      "avg": 13705,
+      "your": 12456
+    },
+    {
+      "date": "July",
+      "avg": 14298,
+      "your": 13049
+    },
+    {
+      "date": "August",
+      "avg": 14084,
+      "your": 12835
+    },
+    {
+      "date": "September",
+      "avg": 13620,
+      "your": 12371
+    },
+    {
+      "date": "October",
+      "avg": 12753,
+      "your": 11504
+    },
+    {
+      "date": "November",
+      "avg": 11802,
+      "your": 10720
+    },
+    {
+      "date": "December",
+      "avg": 11333,
+      "your": 10251
+    }
+  ]
+}

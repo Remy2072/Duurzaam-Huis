@@ -233,7 +233,11 @@ if(isset($_POST['but_logout'])){
           </div>
 
           <!-- *GRAFIEK -->
-          <div class="card"></div>
+          <div class="card">
+            <div class="container">
+                  <canvas id='canvas' width="500" height="200"></canvas>
+          </div>
+          </div>
         </div>
       </main>
 
@@ -249,5 +253,6 @@ if(isset($_POST['but_logout'])){
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="assets/scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
   </body>
 </html>
