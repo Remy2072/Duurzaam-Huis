@@ -14,9 +14,10 @@
       content="https://kaansecen.nl/Projects/DuurzaamHuis/pages/signup.html"
       property="og:url"
     />
+    <meta content="https://i.imgur.com/TJVBH4d.jpg" property="og:image" />
     <link rel="stylesheet" href="../assets/styles/login.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="../assets/images/EcosyIconWebsite.svg" />
+    <link rel="icon" href="../assets/images/EcosyIconWebsite.ico" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />

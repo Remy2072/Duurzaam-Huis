@@ -33,7 +33,7 @@ if(isset($_POST['but_logout'])){
     />
     <meta content="https://i.imgur.com/TJVBH4d.jpg" property="og:image" />
     <meta content="#17c9b7" data-react-helmet="true" name="theme-color" />
-    <link rel="icon" href="assets/images/EcosyIconWebsite.svg" />
+    <link rel="icon" href="assets/images/EcosyIconWebsite.ico" />
     <link rel="stylesheet" href="assets/styles/style.css" />
     <link
       rel="stylesheet"
@@ -235,7 +235,7 @@ if(isset($_POST['but_logout'])){
           <!-- *GRAFIEK -->
           <div class="card">
             <div class="container2">
-              <canvas id="canvas" width="1000" height="600"></canvas>
+              <canvas id="canvas" width="10" height="6"></canvas>
             </div>
           </div>
         </div>

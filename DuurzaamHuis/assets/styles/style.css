@@ -637,6 +637,26 @@ h3 {
 }
 
 /* *GRAFIEK  * -------------------------------------------------------------------------*/
+#canvas {
+  display: block;
+  max-height: 280px;
+  width: 100% !important;
+}
+
+.container2 {
+  position: relative;
+  height: 99%;
+  width: 99%;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 /* *FOOTER * ---------------------------------------------------------------------------*/
 .footer {
@@ -803,42 +823,4 @@ body.lightmode .footer__copyright {
   .main-cards {
     column-count: 2;
   }
-}
-
-/* *MEDIA QUERIES MAC * ----------------------------------------------------------------------------
-@media only screen and (min-width: 192em) {
-  #canvas {
-    display: block;
-    max-width: 800px;
-    max-height: 400px;
-  }
-} */
-
-
-
-
-
-
-
-
-#canvas {
-  display: block;
-  /* max-width: 625px; */
-  max-height: 280px;
-  width: 100% !important;
-}
-
-.container2 {
-  position: relative;
-  height: 99%;
-  width: 99%;
-}
-
-*,
-*:after,
-*:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
 }
