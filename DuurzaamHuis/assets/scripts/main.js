@@ -265,7 +265,7 @@ if (mq.matches) {
 
 
 var xmlhttp = new XMLHttpRequest();
-var url = "http://localhost/DuurzaamHuis/assets/scripts/jsonData.json";
+var url = "assets/scripts/jsonData.json";
 xmlhttp.open("GET",url, true);
 xmlhttp.send();
 xmlhttp.onreadystatechange = function(){
@@ -305,6 +305,8 @@ xmlhttp.onreadystatechange = function(){
                 }]
             },
             options: {
+              maintainAspectRatio: false,
+              responsive: true,
                 elements:{
                     line:{
                         tension:0
