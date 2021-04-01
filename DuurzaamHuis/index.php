@@ -28,9 +28,7 @@ if(isset($_POST['but_logout'])){
       property="og:description"
     />
     <meta
-      content="https://kaansecen.nl/Projects/DuurzaamHuis/pages/signup.html"
-      property="og:url"
-    />
+      content="https://kaansecen.nl/Projects/DuurzaamHuis/pages/signup.html"property="og:url"/>
     <meta content="https://i.imgur.com/TJVBH4d.jpg" property="og:image" />
     <meta content="#17c9b7" data-react-helmet="true" name="theme-color" />
     <link rel="icon" href="assets/images/EcosyIconWebsite.ico" />
