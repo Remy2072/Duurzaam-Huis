@@ -85,7 +85,7 @@ if(isset($_POST['but_logout'])){
             <a href="#"><i class="fas fa-cog"></i> Instellingen </a>
           </li>
           <li class="sidenav__list-item">
-            <a href="#"><i class="fas fa-puzzle-piece"></i> Extensie </a>
+            <a href="https://chrome.google.com/webstore/detail/ecosyplus/pfcdhnmafnfpieljjdonlmpmjjpenhho"><i class="fas fa-puzzle-piece"></i> Extensie </a>
           </li>
           <li class="sidenav__list-item">
             <form method="post" action="">
