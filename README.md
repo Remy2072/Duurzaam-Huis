@@ -9,7 +9,7 @@
 
 ### Onze site
 
-[![Website](https://img.shields.io/badge/-Website-2e343f?logo=google&logoColor=white&style=for-the-badge)](https://kaansecen.nl/Projects/DuurzaamHuis/pages/login.php)
+[![Website](https://img.shields.io/badge/-Website-2e343f?logo=google&logoColor=white&style=for-the-badge)](https://remyduivesteijn.nl/Projects/DuurzaamHuis/pages/login.php)
 [![Trello](https://img.shields.io/badge/-trello-2e343f?logo=Trello&logoColor=white&style=for-the-badge)](https://trello.com/b/ZbAc4eNT/team-ez-10)
 
 ---
