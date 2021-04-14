@@ -226,8 +226,8 @@ if(isset($_POST['but_logout'])){
           <!-- *HUE LAMPEN -->
           <div class="card">
             <span style="margin-bottom: 20px;text-align: center;font-size: 30px;">HUE Lampen</span>
-            <input type="range" min="1" max="100" value="1" id="myRange" class="slider1">
-            <input type="range" min="1" max="100" value="1" id="myRange2" class="slider2">
+            <input type="range" min="1" max="100" value="0" id="slider1" class="slider1">
+            <input type="range" min="1" max="100" value="0" id="slider2" class="slider2">
           </div>
 
           <!-- *GRAFIEK -->
@@ -250,7 +250,9 @@ if(isset($_POST['but_logout'])){
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src = "assets/scripts/ajax_callback.js"></script>
     <script src="assets/scripts/main.js"></script>
+  
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
   </body>
 </html>
