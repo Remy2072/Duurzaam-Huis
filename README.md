@@ -2,7 +2,7 @@
 <h3 align="center">Duurzaam Huis</h3>
 <p align="center">Remy Duivesteijn | Jaymar Westerlow | Kaan Secen</p>
 <p align="center">
-    <a href="https://24114.hosts1.ma-cloud.nl/DuurZaamHuis/index.html"><img src="https://img.shields.io/github/last-commit/Remy2072/Duurzaam-Huis" alt="Last commit"></a>
+    <a href="#"><img src="https://img.shields.io/github/last-commit/Remy2072/Duurzaam-Huis" alt="Last commit"></a>
     <a href="https://github.com/Remy2072/Duurzaam-Huis/releases/latest"><img src="https://img.shields.io/github/v/release/Remy2072/Duurzaam-Huis" alt="Latest Release"></a>
     <a href="https://github.com/Remy2072/Duurzaam-Huis/issues"><img src="https://img.shields.io/badge/contributions-welcome-ff69b4.svg" alt="Contributions Welcome"></a>
 </p>
@@ -34,6 +34,6 @@
 * [Kaan Secen](https://github.com/KaanSecen)
 ---
 
-##### Last edited on: 27/3/2021
+##### Last edited on: 19/4/2021
 
 ![Profile views](https://visitor-badge.glitch.me/badge?page_id=ecosy.ecosy)
